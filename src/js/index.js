@@ -1,5 +1,5 @@
 import { render, h } from 'preact'
-import { Provider } from 'preact-redux'
+import { Provider } from 'react-redux'
 
 import store from './store'
 import '../scss/app.scss'
