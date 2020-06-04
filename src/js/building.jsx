@@ -5,15 +5,36 @@ import find from 'lodash/find'
 
 import known from './data/buildings'
 import Input from './settings/input'
+import Checkbox from './settings/checkbox'
 
-const Building = ({ building, data, percent, updateBuilding }) => {
+const Building = ({ building, data, name, percent, updateBuilding }) => {
+    let [ include = null, setInclude] = useState()
     if (!building || !data) {
         return null
     }
 
     let sum = 0
     let lastShare = 0
-    
+
+    if (!include && data.levels[building.level]) {
+        let initialInclude = {}
+        data.levels[building.level].ranks.map((rank) => {
+            let invest = Math.ceil(rank.fp * (1 + (percent / 100)))
+            let ownShare = Math.max(
+                lastShare,
+                data.levels[building.level].required - sum - 2 * invest
+            )
+            lastShare = ownShare
+            sum += invest
+
+            initialInclude[rank.rank] = ownShare === building.fps
+        })
+        setInclude(initialInclude)
+    }
+
+    let investString = name + ' ' + data.name
+ 
+    sum = lastShare = 0
     return <div>
         <h1>{data.name}</h1>
         <Input
@@ -22,6 +43,7 @@ const Building = ({ building, data, percent, updateBuilding }) => {
             initialValue={"" + building.level}
             type="number"
             update={(value) => {
+                setInclude(null)
                 updateBuilding({
                     id: building.id,
                     fps: 0,
@@ -34,6 +56,7 @@ const Building = ({ building, data, percent, updateBuilding }) => {
             initialValue={"" + building.fps}
             type="number"
             update={(value) => {
+                setInclude(null)
                 updateBuilding({
                     id: building.id,
                     fps: +value,
@@ -61,8 +84,25 @@ const Building = ({ building, data, percent, updateBuilding }) => {
                 lastShare = ownShare
                 sum += invest
 
+                if (include && include[rank.rank]) {
+                    investString += ' P' + rank.rank + ' (' + invest + ')'
+                }
+
                 return <tr key={rank.rank}>
-                    <td>{rank.rank}</td>
+                    <td>
+                        {include ?
+                            <Checkbox
+                                value={include[rank.rank]}
+                                name={rank.rank}
+                                update={(value) => {
+                                    setInclude({
+                                        ...include,
+                                        [rank.rank]: value,
+                                    })
+                                }}/> :
+                            rank.rank
+                        }
+                    </td>
                     <td className="text-right">
                         {Math.max(0, ownShare)}
                         {ownShare < 0 ? <span className="text-red-500"> ({ownShare})</span> : ''}
@@ -76,6 +116,7 @@ const Building = ({ building, data, percent, updateBuilding }) => {
                         <button
                             className="p-1"
                             onClick={() => {
+                                setInclude(null)
                                 updateBuilding({
                                     id: building.id,
                                     fps: Math.max(building.fps, ownShare),
@@ -89,6 +130,7 @@ const Building = ({ building, data, percent, updateBuilding }) => {
             })}
             </tbody>
         </table>}
+        <Input name="Announcement" initialValue={investString} update={() => {}} />
     </div>
 }
 
@@ -97,6 +139,7 @@ export default connect(
         return {
             building: find(buildings, { id: selected }),
             data: find(known, { id: selected }),
+            name: settings.name || 'Player',
             percent: settings.percent || 90,
             ...props,
         }
