@@ -1,12 +1,21 @@
 import { createStore } from 'redux'
 import Storage from './storage'
 import throttle from 'lodash/throttle'
+import filter from 'lodash/filter'
 
 const storeActions = {
     'Building.add': (state, action) => {
         return {
             ...state,
             buildings: state.buildings.concat([action.building]),
+        }
+    },
+    'Building.remove': (state, action) => {
+        return {
+            ...state,
+            buildings: filter(state.buildings, (building) => {
+                return building.id !== action.building
+            }),
         }
     },
     'Building.select': (state, action) => {
