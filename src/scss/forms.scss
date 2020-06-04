@@ -1,0 +1,35 @@
+select {
+    @apply appearance-none w-full bg-white border border-gray-300 text-base text-gray-800 font-bold py-2 pl-4 pr-8 rounded leading-tight bg-white;
+
+    &:focus {
+        @apply outline-none border-gray-500
+    }
+}
+
+input {
+    @apply appearance-none border rounded w-full py-2 px-4 text-gray-700 leading-tight shadow;
+
+    &:focus {
+        @apply outline-none shadow-outline;
+    }
+}
+
+button {
+    @apply font-bold py-2 px-4 rounded shadow;
+
+    &:disabled {
+        @apply bg-gray-400;
+
+        &:hover {
+            @apply bg-gray-400;
+        }
+    }
+
+    &.button--primary {
+        @apply bg-blue-500 text-white;
+
+        &:hover {
+            @apply bg-blue-700;
+        }
+    }
+}
