@@ -40,7 +40,8 @@ foreach ($buildings as $buildingNumber => $building) {
             $medals = $xPath->query('.//a[@title="Medals"]//following-sibling::text()', $rankNode)->item(0);
             $bp = $xPath->query('.//a[@title="Blueprints"]//following-sibling::text()', $rankNode)->item(0);
 
-            $building->ranks[$rank][$id + 1] = (object) [
+            $building->ranks[$rank][] = (object) [
+                'rank' => $id + 1,
                 'fp' => $fp ? (int) preg_replace('([\\s,+])', '', $fp->textContent) : 0,
                 'medals' => $medals ? (int) preg_replace('([\\s,+])', '', $medals->textContent) : 0,
                 'bp' => $bp ? (int) preg_replace('([\\s,+])', '', $bp->textContent) : 0,
