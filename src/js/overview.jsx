@@ -1,6 +1,8 @@
 import { h, render } from 'preact'
 import { connect } from 'react-redux'
 
+import buildings from './data/buildings'
+
 const Overview = ({ selected, buildings }) => {
     console.log(selected, buildings)
     return <div>

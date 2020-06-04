@@ -1,0 +1,53 @@
+#!/usr/bin/env php
+<?php
+
+function get(string $url): string {
+    $cacheKey = __DIR__ . '/.cache/' . md5($url);
+    if (file_exists($cacheKey)) {
+        return file_get_contents($cacheKey);
+    }
+
+    $content = file_get_contents($url);
+    file_put_contents($cacheKey, $content);
+    return $content;
+}
+
+libxml_use_internal_errors(true);
+$buildingListHtml = new \DOMDocument();
+$buildingListHtml->loadHTML(get('https://forgeofempires.fandom.com/wiki/Great_Buildings'));
+
+$xPath = new \DOMXPath($buildingListHtml);
+$buildings = [];
+foreach ($xPath->query('//table//big//a') as $buildingLink) {
+    $buildings[] = (object) [
+        'name' => trim($buildingLink->textContent),
+        'link' => 'https://forgeofempires.fandom.com' . $buildingLink->getAttribute('href'),
+        'ranks' => [],
+    ];
+}
+
+foreach ($buildings as $buildingNumber => $building) {
+    $buildingHtml = new \DOMDocument();
+    $buildingHtml->loadHTML(get($building->link));
+
+    $xPath = new \DOMXPath($buildingHtml);
+    echo "Loading ", $building->name, PHP_EOL;
+    foreach ($xPath->query('//div[@class="tabber"]//div[@class="tabbertab"]') as $rankTable) {
+        $rank = (int) substr($rankTable->getAttribute('title'), 4);
+        foreach ($xPath->query('.//td', $rankTable) as $id => $rankNode) {
+            $fp = $xPath->query('.//a[@title="Forge Point"]//following-sibling::text()', $rankNode)->item(0);
+            $medals = $xPath->query('.//a[@title="Medals"]//following-sibling::text()', $rankNode)->item(0);
+            $bp = $xPath->query('.//a[@title="Blueprints"]//following-sibling::text()', $rankNode)->item(0);
+
+            $building->ranks[$rank][$id + 1] = (object) [
+                'fp' => $fp ? (int) preg_replace('([\\s,+])', '', $fp->textContent) : 0,
+                'medals' => $medals ? (int) preg_replace('([\\s,+])', '', $medals->textContent) : 0,
+                'bp' => $bp ? (int) preg_replace('([\\s,+])', '', $bp->textContent) : 0,
+            ];
+        }
+    }
+}
+
+file_put_contents(__DIR__ . '/../src/js/data/buildings.json', json_encode($buildings));
+
+echo "Done", PHP_EOL;

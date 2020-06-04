@@ -4,6 +4,7 @@
     "private": true,
     "homepage": "https://foe.k023.de/",
     "dependencies": {
+        "lodash": "^4.17.15",
         "preact": "^10.4.4",
         "preact-context": "^1.1.4",
         "react-redux": "^7.2.0",
