@@ -3,9 +3,16 @@ import Storage from './storage'
 import throttle from 'lodash/throttle'
 
 const storeActions = {
-    'Buiding.add': (state, action) => {
+    'Building.add': (state, action) => {
         return {
             ...state,
+            buildings: state.buildings.concat([action.building]),
+        }
+    },
+    'Building.select': (state, action) => {
+        return {
+            ...state,
+            selected: action.building,
         }
     },
 }
@@ -13,8 +20,8 @@ const storeActions = {
 const storage = new Storage()
 const initialStore = {
     selected: null,
-    buildings: storage.load('buildings') || {},
-    settings: storage.load('settings') || {},
+    buildings: storage.load('buildings') || [],
+    settings: storage.load('settings') || [],
 }
 
 const store = createStore(
@@ -28,9 +35,8 @@ const store = createStore(
 )
 
 store.subscribe(throttle(() => {
-    console.log('Store to storage')
-    storage.save('buildings', store.getState.buildings)
-    storage.save('settings', store.getState.settings)
+    storage.save('buildings', store.getState().buildings)
+    storage.save('settings', store.getState().settings)
 }, 1000))
 
 export default store

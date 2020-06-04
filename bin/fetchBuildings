@@ -20,6 +20,7 @@ $xPath = new \DOMXPath($buildingListHtml);
 $buildings = [];
 foreach ($xPath->query('//table//big//a') as $buildingLink) {
     $buildings[] = (object) [
+        'id' => substr(md5(trim($buildingLink->textContent)), 0, 8),
         'name' => trim($buildingLink->textContent),
         'link' => 'https://forgeofempires.fandom.com' . $buildingLink->getAttribute('href'),
         'ranks' => [],
