@@ -34,18 +34,47 @@ foreach ($buildings as $buildingNumber => $building) {
     $xPath = new \DOMXPath($buildingHtml);
     echo "Loading ", $building->name, PHP_EOL;
     foreach ($xPath->query('//div[@class="tabber"]//div[@class="tabbertab"]') as $rankTable) {
-        $rank = (int) substr($rankTable->getAttribute('title'), 4);
+        $level = (int) substr($rankTable->getAttribute('title'), 4);
+        $building->levels[$level] = (object) [
+            'required' => false,
+            'ranks' => [],
+        ];
+
         foreach ($xPath->query('.//td', $rankTable) as $id => $rankNode) {
             $fp = $xPath->query('.//a[@title="Forge Point"]//following-sibling::text()', $rankNode)->item(0);
             $medals = $xPath->query('.//a[@title="Medals"]//following-sibling::text()', $rankNode)->item(0);
             $bp = $xPath->query('.//a[@title="Blueprints"]//following-sibling::text()', $rankNode)->item(0);
 
-            $building->ranks[$rank][] = (object) [
+            $building->levels[$level]->ranks[] = (object) [
                 'rank' => $id + 1,
                 'fp' => $fp ? (int) preg_replace('([\\s,+])', '', $fp->textContent) : 0,
                 'medals' => $medals ? (int) preg_replace('([\\s,+])', '', $medals->textContent) : 0,
                 'bp' => $bp ? (int) preg_replace('([\\s,+])', '', $bp->textContent) : 0,
             ];
+        }
+    }
+
+    foreach ($xPath->query('//table[@class="FoETable WrapTable floatheader"]//tr') as $rankTable) {
+        $level = false;
+        $required = false;
+
+        foreach ($xPath->query('.//td', $rankTable) as $id => $rankNode) {
+            if (preg_match('(→\\s*(\\d+))', $rankNode->textContent, $match)) {
+                $level = (int) $match[1];
+            }
+
+            if (preg_match('(^\\s*([\\d,]+)\\s*$)', $rankNode->textContent, $match)) {
+                $required = (int) preg_replace('([\\s,+])', '', $match[1]);
+            }
+
+            if ($level && $required) {
+                if (!isset($building->levels[$level])) {
+                    continue 2;
+                }
+
+                $building->levels[$level]->required = $required;
+                continue 2;
+            }
         }
     }
 }
