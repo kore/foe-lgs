@@ -24,6 +24,15 @@ const storeActions = {
             selected: action.building,
         }
     },
+    'Settings.set': (state, action) => {
+        return {
+            ...state,
+            settings: {
+                ...state.settings,
+                [action.key]: action.value,
+            }
+        }
+    },
 }
 
 const storage = new Storage()

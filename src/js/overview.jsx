@@ -15,7 +15,7 @@ const Overview = ({ selected, buildings, addBuidling, removeBuilding, selectBuid
                 let buildingData = find(known, { id: building.id })
                 return <div
                     key={building.id}
-                    className="card grid grid-rows-1">
+                    className={"card grid grid-rows-1" + (building.id === selected ? ' card--selected' : '')}>
                     <h3>{buildingData.name}</h3>
                     <h4 className="text-sm font-hairline">Level {building.level}</h4>
                     <div className="flex justify-around mt-4">

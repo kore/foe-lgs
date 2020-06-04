@@ -4,4 +4,8 @@
     &:hover {
         @apply bg-gray-100;
     }
+
+    &.card--selected {
+        @apply bg-blue-100;
+    }
 }

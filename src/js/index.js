@@ -5,6 +5,7 @@ import store from './store'
 import '../scss/app.scss'
 
 import Overview from './overview'
+import Settings from './settings'
 import Building from './building'
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
         <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2">
             <Overview />
             <Building />
+            <Settings />
         </div>
     </Provider>
 }
