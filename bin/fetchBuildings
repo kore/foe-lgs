@@ -79,6 +79,13 @@ foreach ($buildings as $buildingNumber => $building) {
     }
 }
 
+usort(
+    $buildings,
+    function ($a, $b) {
+        return $a->name <=> $b->name;
+    }
+);
+
 file_put_contents(__DIR__ . '/../src/js/data/buildings.json', json_encode($buildings));
 
 echo "Done", PHP_EOL;

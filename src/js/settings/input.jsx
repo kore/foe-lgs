@@ -1,20 +1,23 @@
-import { h, render } from 'preact'
+import { h, render, Fragment } from 'preact'
 import { useState, useRef } from 'preact/hooks'
 import { connect } from 'react-redux'
 import debounce from 'lodash/debounce'
 
-const Input = ({ update, name, initialValue }) => {
+const Input = ({ update, name, initialValue, type = 'text' }) => {
     const [value = initialValue, setValue] = useState()
     const delayedUpdate = useRef(debounce(update, 500)).current
 
-    return <input
-        type="text"
-        value={value}
-        placeholder={name}
-        onChange={(event) => {
-            setValue(event.target.value)
-            delayedUpdate(event.target.value)
-        }} />
+    return <Fragment>
+        <span className="input-adornment">{name}</span>
+        <input
+            type={type}
+            value={value}
+            placeholder={name}
+            onChange={(event) => {
+                setValue(event.target.value)
+                delayedUpdate(event.target.value)
+            }} />
+    </Fragment>
 }
 
 export default Input

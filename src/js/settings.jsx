@@ -27,6 +27,12 @@ const Settings = ({ settings, setSetting }) => {
                 update={(value) => {
                     setSetting('name', value)}
                 } />
+            <Input
+                name="Förderung (%)"
+                initialValue={settings.percent || "90"}
+                update={(value) => {
+                    setSetting('percent', +value)}
+                } />
         </div>
     </div>
 }

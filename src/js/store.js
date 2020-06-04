@@ -2,12 +2,28 @@ import { createStore } from 'redux'
 import Storage from './storage'
 import throttle from 'lodash/throttle'
 import filter from 'lodash/filter'
+import findIndex from 'lodash/findIndex'
 
 const storeActions = {
     'Building.add': (state, action) => {
         return {
             ...state,
             buildings: state.buildings.concat([action.building]),
+        }
+    },
+    'Building.update': (state, action) => {
+        const buildingIndex = findIndex(state.buildings, { id: action.id })
+        const building = {
+            ...state.buildings[buildingIndex],
+            level: action.level,
+            fps: action.fps,
+        }
+        let buildings = [...state.buildings]
+        buildings[buildingIndex] = building
+
+        return {
+            ...state,
+            buildings,
         }
     },
     'Building.remove': (state, action) => {
@@ -37,7 +53,7 @@ const storeActions = {
 
 const storage = new Storage()
 const initialStore = {
-    selected: null,
+    selected: storage.load('selected') || null,
     buildings: storage.load('buildings') || [],
     settings: storage.load('settings') || [],
 }
@@ -53,6 +69,7 @@ const store = createStore(
 )
 
 store.subscribe(throttle(() => {
+    storage.save('selected', store.getState().selected)
     storage.save('buildings', store.getState().buildings)
     storage.save('settings', store.getState().settings)
 }, 1000))
