@@ -5,6 +5,7 @@ const SERVER = false
 
 let config = require('./webpack.js')(PRODUCTION, SERVER)
 
+config = require('./webpack/preact.js')(config, PRODUCTION, SERVER)
 config = require('./webpack/namedModules.js')(config, PRODUCTION, SERVER)
 config = require('./webpack/buildStatistics.js')(config, PRODUCTION, SERVER)
 config = require('./webpack/manifest.js')(config, PRODUCTION, SERVER)

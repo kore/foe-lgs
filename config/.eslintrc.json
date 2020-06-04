@@ -1,6 +1,5 @@
 {
-    "extends": ["standard", "react-app", "standard-react"],
-    "plugins": ["react-hooks"],
+    "extends": ["standard", "preact"],
     "parserOptions": {
         "ecmaVersion": 6,
         "ecmaFeatures": {
@@ -31,8 +30,6 @@
         "jsx-a11y/anchor-is-valid": [0],
         "strict": 1,
         "react/boolean-prop-naming": 1,
-        "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps": "warn",
         "react/no-unused-prop-types": "off"
     },
     "globals": {
