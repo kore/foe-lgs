@@ -18,7 +18,7 @@ const storeActions = {
             level: action.level,
             fps: action.fps,
         }
-        let buildings = [...state.buildings]
+        const buildings = [...state.buildings]
         buildings[buildingIndex] = building
 
         return {
@@ -46,7 +46,7 @@ const storeActions = {
             settings: {
                 ...state.settings,
                 [action.key]: action.value,
-            }
+            },
         }
     },
 }
@@ -64,8 +64,7 @@ const store = createStore(
             storeActions[action.type](state, action) :
             state
     },
-    initialStore,
-    typeof devToolsExtension === 'function' ? devToolsExtension() : undefined
+    initialStore
 )
 
 store.subscribe(throttle(() => {

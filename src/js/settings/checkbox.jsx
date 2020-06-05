@@ -1,6 +1,4 @@
-import { h, render, Fragment } from 'preact'
-import { connect } from 'react-redux'
-import debounce from 'lodash/debounce'
+import { h, Fragment } from 'preact'
 
 const Checkbox = ({ update, name = '', value }) => {
     return <Fragment>

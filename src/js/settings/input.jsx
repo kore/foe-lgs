@@ -1,6 +1,5 @@
-import { h, render, Fragment } from 'preact'
+import { h } from 'preact'
 import { useState, useRef } from 'preact/hooks'
-import { connect } from 'react-redux'
 import debounce from 'lodash/debounce'
 
 const Input = ({ update, name, initialValue, type = 'text', disabled = false }) => {

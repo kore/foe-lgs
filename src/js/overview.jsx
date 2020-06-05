@@ -1,4 +1,4 @@
-import { h, render } from 'preact'
+import { h } from 'preact'
 import { useState, useContext } from 'preact/hooks'
 import { TranslateContext } from '@denysvuika/preact-translate'
 import { connect } from 'react-redux'
@@ -22,20 +22,20 @@ const Overview = ({ selected, buildings, addBuidling, removeBuilding, selectBuid
         <h1>{t('Great Buildings')}</h1>
         <div className="grid grid-cols-3 sm:grid-cols-2 m:grid-cols-3 gap-4">
             {buildings.map((building) => {
-                let buildingData = find(known, { id: building.id })
+                const buildingData = find(known, { id: building.id })
                 return <div
                     key={building.id}
-                    className={"card grid grid-rows-1" + (building.id === selected ? ' card--selected' : '')}>
+                    className={`card grid grid-rows-1${building.id === selected ? ' card--selected' : ''}`}>
                     <h3>{t(buildingData.name)}</h3>
                     <h4 className="text-sm font-hairline">Level {building.level}</h4>
                     <div className="flex justify-around mt-4">
                         <button
-                            onClick={() => { removeBuilding(building.id)} }>
+                            onClick={() => { removeBuilding(building.id) } }>
                             🚮
                         </button>
                         <button
                             className="button--primary"
-                            onClick={() => { selectBuidling(building.id)} }>
+                            onClick={() => { selectBuidling(building.id) } }>
                             {t("Select")}
                         </button>
                     </div>
@@ -49,7 +49,7 @@ const Overview = ({ selected, buildings, addBuidling, removeBuilding, selectBuid
                     setValue(event.currentTarget.value)
                 }}>
                 <option value="">{t("Please Select")}</option>
-            {known.map((building) => {
+                {known.map((building) => {
                 if (find(buildings, { id: building.id })) {
                     return null
                 }

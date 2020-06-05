@@ -1,4 +1,4 @@
-import { h, render } from 'preact'
+import { h } from 'preact'
 import { useState, useContext } from 'preact/hooks'
 import { connect } from 'react-redux'
 import { TranslateContext } from '@denysvuika/preact-translate'
@@ -8,7 +8,7 @@ import Select from './settings/select'
 
 const Settings = ({ settings, setSetting }) => {
     const [visible, setVisible] = useState()
-    const { setLang, t, lang } = useContext(TranslateContext)
+    const { setLang, t } = useContext(TranslateContext)
 
     if (!settings.name) {
         setVisible(true)
@@ -32,13 +32,15 @@ const Settings = ({ settings, setSetting }) => {
                 name={t("Name")}
                 initialValue={settings.name}
                 update={(value) => {
-                    setSetting('name', value)}
+                    setSetting('name', value)
+}
                 } />
             <Input
                 name={t("Advance (%)")}
                 initialValue={settings.percent || "90"}
                 update={(value) => {
-                    setSetting('percent', +value)}
+                    setSetting('percent', +value)
+}
                 } />
             <Select
                 name={t("Language")}

@@ -7,7 +7,6 @@ class Storage {
             }
             return JSON.parse(serializedState)
         } catch (error) {
-            console.warn(error)
             return undefined
         }
     }
@@ -16,8 +15,8 @@ class Storage {
         try {
             const serializedState = JSON.stringify(value)
             window.localStorage.setItem(item, serializedState)
-        } catch (error) {
-            console.error(error)
+        } catch {
+            // Ignore
         }
     }
 }

@@ -1,4 +1,4 @@
-import { h, render, Fragment } from 'preact'
+import { h } from 'preact'
 
 const Select = ({ update, name, value, values, disabled = false }) => {
     return <div className="flex-grow">
