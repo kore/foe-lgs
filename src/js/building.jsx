@@ -1,5 +1,6 @@
 import { h, render } from 'preact'
-import { useState } from 'preact/hooks'
+import { useState, useContext } from 'preact/hooks'
+import { TranslateContext } from '@denysvuika/preact-translate'
 import { connect } from 'react-redux'
 import find from 'lodash/find'
 
@@ -34,6 +35,8 @@ const calculateRankRequirements = (required, ranks, percent) => {
 
 const Building = ({ building, data, name, percent, updateBuilding }) => {
     let [ include = null, setInclude] = useState()
+    const { t } = useContext(TranslateContext)
+
     if (!building || !data) {
         return null
     }
@@ -55,9 +58,9 @@ const Building = ({ building, data, name, percent, updateBuilding }) => {
         setInclude(initialInclude)
     }
 
-    let investString = 'No level information available'
+    let investString = t('No level information available')
     if (ranks) {
-        investString = name + ' ' + data.name
+        investString = name + ' ' + t(data.name)
         for (let i = ranks.length - 1; i >= 0 ; --i) {
             let rank = ranks[i]
             if (include && include[rank.rank]) {
@@ -67,11 +70,11 @@ const Building = ({ building, data, name, percent, updateBuilding }) => {
     }
  
     return <div>
-        <h1>{data.name}</h1>
+        <h1>{t(data.name)}</h1>
         <div className="mt-4 flex justify-around items-end">
             <Input
                 key={building.id}
-                name="Level"
+                name={t("Level")}
                 initialValue={"" + building.level}
                 type="number"
                 update={(value) => {
@@ -97,7 +100,7 @@ const Building = ({ building, data, name, percent, updateBuilding }) => {
         </div>
         <Input
             key={building.id}
-            name="Invested FPs"
+            name={t("Invested FPs")}
             initialValue={"" + building.fps}
             type="number"
             update={(value) => {
@@ -108,13 +111,13 @@ const Building = ({ building, data, name, percent, updateBuilding }) => {
                     level: building.level,
                 })
             }} />
-        <h2>Ranks</h2>
+        <h2 className="mt-4">{t("Ranks")}</h2>
         {ranks && <table className="w-full">
             <thead>
                 <tr>
-                    <th>Rank</th>
-                    <th>Required</th>
-                    <th>To Pay</th>
+                    <th>{t("Rank")}</th>
+                    <th>{t("Required")}</th>
+                    <th>{t("To Pay")}</th>
                     <th></th>
                 </tr>
             </thead>
@@ -164,7 +167,7 @@ const Building = ({ building, data, name, percent, updateBuilding }) => {
         </table>}
         <div className="mt-4 flex justify-around items-end">
             <div className="flex-grow">
-                <span className="input-adornment">Announcement</span>
+                <span className="input-adornment">{t("Announcement")}</span>
                 <input id='announcement' value={investString} />
             </div>
             <button
@@ -172,7 +175,6 @@ const Building = ({ building, data, name, percent, updateBuilding }) => {
                 className="px-4 py-2 ml-2 h-10"
                 onClick={(event) => {
                     let inputField = document.getElementById("announcement")
-                    console.log(inputField)
 
                     inputField.select()
                     inputField.setSelectionRange(0, 99999)

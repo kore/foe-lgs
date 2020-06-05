@@ -1,5 +1,6 @@
 import { h, render } from 'preact'
-import { useState } from 'preact/hooks'
+import { useState, useContext } from 'preact/hooks'
+import { TranslateContext } from '@denysvuika/preact-translate'
 import { connect } from 'react-redux'
 import find from 'lodash/find'
 
@@ -7,20 +8,25 @@ import known from './data/buildings'
 
 const Overview = ({ selected, buildings, addBuidling, removeBuilding, selectBuidling }) => {
     const [value, setValue] = useState()
+    const { t } = useContext(TranslateContext)
 
     buildings.sort((a, b) => {
-        return find(known, { id: a.id }).name.localeCompare(find(known, { id: b.id }).name)
+        return t(find(known, { id: a.id }).name).localeCompare(t(find(known, { id: b.id }).name))
+    })
+
+    known.sort((a, b) => {
+        return t(a.name).localeCompare(t(b.name))
     })
 
     return <div>
-        <h1>Legendäre Gebäude</h1>
+        <h1>{t('Great Buildings')}</h1>
         <div className="grid grid-cols-3 sm:grid-cols-2 m:grid-cols-3 gap-4">
             {buildings.map((building) => {
                 let buildingData = find(known, { id: building.id })
                 return <div
                     key={building.id}
                     className={"card grid grid-rows-1" + (building.id === selected ? ' card--selected' : '')}>
-                    <h3>{buildingData.name}</h3>
+                    <h3>{t(buildingData.name)}</h3>
                     <h4 className="text-sm font-hairline">Level {building.level}</h4>
                     <div className="flex justify-around mt-4">
                         <button
@@ -30,7 +36,7 @@ const Overview = ({ selected, buildings, addBuidling, removeBuilding, selectBuid
                         <button
                             className="button--primary"
                             onClick={() => { selectBuidling(building.id)} }>
-                            Select
+                            {t("Select")}
                         </button>
                     </div>
                 </div>
@@ -42,13 +48,13 @@ const Overview = ({ selected, buildings, addBuidling, removeBuilding, selectBuid
                 onChange={(event) => {
                     setValue(event.currentTarget.value)
                 }}>
-                <option value="">Please Select</option>
+                <option value="">{t("Please Select")}</option>
             {known.map((building) => {
                 if (find(buildings, { id: building.id })) {
                     return null
                 }
 
-                return <option key={building.id} value={building.id}>{building.name}</option>
+                return <option key={building.id} value={building.id}>{t(building.name)}</option>
             })}
             </select>
             <button
@@ -58,7 +64,7 @@ const Overview = ({ selected, buildings, addBuidling, removeBuilding, selectBuid
                     setValue(null)
                     addBuidling(value)
                 }}>
-                Add
+                {t("Add")}
             </button>
         </div>
     </div>
