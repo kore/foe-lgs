@@ -49,6 +49,12 @@ const storeActions = {
             },
         }
     },
+    'Building.list': (state, action) => {
+        return {
+            ...state,
+            known: action.buildings,
+        }
+    },
 }
 
 const storage = new Storage()
@@ -56,6 +62,7 @@ const initialStore = {
     selected: storage.load('selected') || null,
     buildings: storage.load('buildings') || [],
     settings: storage.load('settings') || [],
+    known: storage.load('known') || [],
 }
 
 const store = createStore(
@@ -67,10 +74,18 @@ const store = createStore(
     initialStore
 )
 
+import('./data/buildings.json').then(({ default: buildings }) => {
+    store.dispatch({
+        type: 'Building.list',
+        buildings,
+    })
+})
+
 store.subscribe(throttle(() => {
     storage.save('selected', store.getState().selected)
     storage.save('buildings', store.getState().buildings)
     storage.save('settings', store.getState().settings)
+    storage.save('known', store.getState().known)
 }, 1000))
 
 export default store

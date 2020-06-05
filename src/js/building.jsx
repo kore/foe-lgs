@@ -4,7 +4,6 @@ import { TranslateContext } from '@denysvuika/preact-translate'
 import { connect } from 'react-redux'
 import find from 'lodash/find'
 
-import known from './data/buildings'
 import Input from './settings/input'
 import Checkbox from './settings/checkbox'
 
@@ -190,7 +189,7 @@ const Building = ({ building, data, name, percent, updateBuilding }) => {
 }
 
 export default connect(
-    ({ selected, buildings, settings }, props) => {
+    ({ selected, buildings, known, settings }, props) => {
         return {
             building: find(buildings, { id: selected }),
             data: find(known, { id: selected }),

@@ -4,10 +4,9 @@ import { TranslateContext } from '@denysvuika/preact-translate'
 import { connect } from 'react-redux'
 import find from 'lodash/find'
 
-import known from './data/buildings'
 import Select from './settings/select'
 
-const Overview = ({ selected, buildings, addBuidling, removeBuilding, selectBuidling }) => {
+const Overview = ({ selected, buildings, known, addBuidling, removeBuilding, selectBuidling }) => {
     const [value, setValue] = useState()
     const { t } = useContext(TranslateContext)
 
@@ -68,10 +67,11 @@ const Overview = ({ selected, buildings, addBuidling, removeBuilding, selectBuid
 }
 
 export default connect(
-    ({ selected, buildings }, props) => {
+    ({ selected, buildings, known }, props) => {
         return {
             selected,
             buildings,
+            known,
             ...props,
         }
     },
