@@ -1,31 +1,7 @@
 .beta {
+    @apply rounded bg-blue-700 text-base text-white py-1 px-4;
+
     position: absolute;
-    right: 6px;
-    top: 6px;
-    background-color: theme('colors.blue.700');
-    transform: rotate(45deg) scale(1) skew(0deg) translate(10px);
-    text-align: center;
-    color: white;
-    padding: 0 .5em;
-    border-top: 0px;
-    line-height: 20px;
-    margin: 0;
-
-    &:after {
-        content: ' ';
-        position: absolute;
-        right: -19px;
-        top: 0px;
-        border-right: 20px solid transparent;
-        border-bottom: 20px solid theme('colors.blue.700');
-    }
-
-    &:before {
-        content: ' ';
-        position: absolute;
-        left: -19px;
-        top: 0px;
-        border-left: 20px solid transparent;
-        border-bottom: 20px solid theme('colors.blue.700');
-    }
+    right: .5em;
+    top: .5em;
 }
