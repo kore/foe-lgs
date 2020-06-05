@@ -11,6 +11,8 @@ based on the following technologies:
 It implements a mobile optimized version of the common necessary investment
 calculators of Innogames Forge Of Empires game.
 
+You can use this on https://foe.k023.de/
+
 ## Develop
 
 To install all dependencies run `yarn install`. Then running `yarn run start`
