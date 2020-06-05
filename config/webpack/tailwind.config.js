@@ -146,4 +146,10 @@ module.exports = {
     variants: {
         borderWidth: ['responsive', 'hover', 'focus'],
     },
+    purge: {
+        mode: 'all',
+        content: [
+            './src/**/*.jsx',
+        ],
+    },
 }
