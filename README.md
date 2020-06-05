@@ -22,6 +22,5 @@ browser and start hacking.
 ## Deploy
 
 ```
-$ yarn run build
-$ scp -r public/* privat-web:foe.k023.de/public/
+$ yarn run deploy
 ```
