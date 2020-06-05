@@ -1,9 +1,12 @@
 import { h } from 'preact'
 
 const Select = ({ update, name, value, values, disabled = false }) => {
+    const id = ('select_' + btoa(name)).replace(/=/g, '')
+
     return <div className="flex-grow">
-        <span className="input-adornment">{name}</span>
+        <label htmlFor={id} className="input-adornment">{name}</label>
         <select
+            id={id}
             value={value}
             disabled={disabled}
             onChange={(event) => {
