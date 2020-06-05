@@ -3,21 +3,22 @@ import { useState, useRef } from 'preact/hooks'
 import { connect } from 'react-redux'
 import debounce from 'lodash/debounce'
 
-const Input = ({ update, name, initialValue, type = 'text' }) => {
+const Input = ({ update, name, initialValue, type = 'text', disabled = false }) => {
     const [value = initialValue, setValue] = useState()
     const delayedUpdate = useRef(debounce(update, 500)).current
 
-    return <Fragment>
+    return <div className="flex-grow">
         <span className="input-adornment">{name}</span>
         <input
             type={type}
             value={value}
             placeholder={name}
+            disabled={disabled}
             onChange={(event) => {
                 setValue(event.target.value)
                 delayedUpdate(event.target.value)
             }} />
-    </Fragment>
+    </div>
 }
 
 export default Input

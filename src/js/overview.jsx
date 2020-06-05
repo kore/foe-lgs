@@ -48,6 +48,7 @@ const Overview = ({ selected, buildings, addBuidling, removeBuilding, selectBuid
             })}
             </select>
             <button
+                className="ml-2"
                 disabled={!value}
                 onClick={() => {
                     setValue(null)

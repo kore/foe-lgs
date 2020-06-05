@@ -10,7 +10,7 @@ import Building from './building'
 
 const App = () => {
     return <Provider store={store}>
-        <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="container mx-auto px-2 pb-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Overview />
             <Building />
             <Settings />
