@@ -4,7 +4,21 @@
 }
 
 select {
-    @apply appearance-none w-full bg-white border border-gray-300 text-base text-gray-800 font-bold py-2 pl-4 pr-8 rounded leading-tight bg-white;
+    @apply appearance-none w-full bg-white border border-gray-300 text-base text-gray-800 py-2 pl-4 pr-8 rounded leading-tight bg-white;
+
+    background:
+        linear-gradient(45deg, transparent 50%, theme('colors.blue.700') 50%),
+        linear-gradient(135deg, theme('colors.blue.700') 50%, transparent 50%),
+        linear-gradient(to right, theme('colors.blue.100'), theme('colors.blue.100'));
+    background-position:
+        calc(100% - 21px) calc(1em + 2px),
+        calc(100% - 16px) calc(1em + 2px),
+        100% 0;
+    background-size:
+        5px 5px,
+        5px 5px,
+        2.5em 2.5em;
+    background-repeat: no-repeat;
 
     &:focus {
         @apply outline-none border-gray-500
