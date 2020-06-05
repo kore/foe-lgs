@@ -7,10 +7,10 @@ module.exports = (config, PRODUCTION, SERVER) => {
         plugins: [
             new HtmlWebpackPlugin({
                 template: paths.appTemplates + '/index.html',
-                title: 'FoE: LGs',
+                title: 'FoE Calculator',
                 meta: {
                     'viewport': 'width=device-width, initial-scale=1, shrink-to-fit=no',
-                    'theme-color': '#4285f4'
+                    'description': 'Calculator for Forge of Empires Greate Bilding Investments',
                 },
             })
         ],
