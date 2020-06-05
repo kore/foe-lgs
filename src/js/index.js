@@ -11,6 +11,12 @@ import Building from './building'
 
 import translations from './data/translations'
 
+(function() {
+    if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js')
+    }
+})()
+
 const App = () => {
     return <Provider store={store}>
         <TranslateProvider lang="de" translations={translations}>

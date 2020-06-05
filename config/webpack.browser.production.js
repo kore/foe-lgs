@@ -13,6 +13,7 @@ config = require('./webpack/serviceWorker.js')(config, PRODUCTION, SERVER)
 config = require('./webpack/compileScss.js')(config, PRODUCTION, SERVER)
 config = require('./webpack/tailwind.js')(config, PRODUCTION, SERVER)
 config = require('./webpack/generateHtml.js')(config, PRODUCTION, SERVER)
+config = require('./webpack/pwaManifest.js')(config, PRODUCTION, SERVER)
 
 config.optimization = {
     minimize: true,
