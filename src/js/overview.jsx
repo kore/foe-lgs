@@ -8,6 +8,10 @@ import known from './data/buildings'
 const Overview = ({ selected, buildings, addBuidling, removeBuilding, selectBuidling }) => {
     const [value, setValue] = useState()
 
+    buildings.sort((a, b) => {
+        return find(known, { id: a.id }).name.localeCompare(find(known, { id: b.id }).name)
+    })
+
     return <div>
         <h1>Legendäre Gebäude</h1>
         <div className="grid grid-cols-3 sm:grid-cols-2 m:grid-cols-3 gap-4">
