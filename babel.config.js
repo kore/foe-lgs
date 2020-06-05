@@ -5,6 +5,7 @@ module.exports = function (api) {
         '@babel/plugin-proposal-class-properties',
         '@babel/plugin-syntax-dynamic-import',
         ['@babel/transform-react-jsx', { 'pragma': 'h' }],
+        'lodash'
     ]
 
     return {

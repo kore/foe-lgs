@@ -1,8 +1,8 @@
 import { createStore } from 'redux'
 import Storage from './storage'
-import throttle from 'lodash/throttle'
-import filter from 'lodash/filter'
-import findIndex from 'lodash/findIndex'
+import throttle from 'lodash-es/throttle'
+import filter from 'lodash-es/filter'
+import findIndex from 'lodash-es/findIndex'
 
 const storeActions = {
     'Building.add': (state, action) => {

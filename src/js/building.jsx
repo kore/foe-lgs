@@ -2,7 +2,7 @@ import { h } from 'preact'
 import { useState, useContext } from 'preact/hooks'
 import { TranslateContext } from '@denysvuika/preact-translate'
 import { connect } from 'react-redux'
-import find from 'lodash/find'
+import find from 'lodash-es/find'
 
 import Input from './settings/input'
 import Checkbox from './settings/checkbox'

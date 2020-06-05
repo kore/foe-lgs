@@ -1,6 +1,6 @@
 import { h } from 'preact'
 import { useState, useRef } from 'preact/hooks'
-import debounce from 'lodash/debounce'
+import debounce from 'lodash-es/debounce'
 
 const Input = ({ update, name, initialValue, type = 'text', disabled = false }) => {
     const [value = initialValue, setValue] = useState()

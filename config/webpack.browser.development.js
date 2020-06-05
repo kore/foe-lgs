@@ -12,6 +12,7 @@ config = require('./webpack/developmenPerformance.js')(config, PRODUCTION, SERVE
 config = require('./webpack/compileScss.js')(config, PRODUCTION, SERVER)
 config = require('./webpack/tailwind.js')(config, PRODUCTION, SERVER)
 config = require('./webpack/generateHtml.js')(config, PRODUCTION, SERVER)
+config = require('./webpack/lodash.js')(config, PRODUCTION, SERVER)
 
 config.output.filename = 'webpack/js/bundle.js'
 
