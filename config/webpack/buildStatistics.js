@@ -8,12 +8,12 @@ module.exports = (config, PRODUCTION, SERVER) => {
             plugins: [
                 // Anlyze bundle size
                 new BundleAnalyzerPlugin({
-                    reportFilename: 'bundleSize.html',
+                    reportFilename: '../build/bundleSize.html',
                     analyzerMode: 'static',
                 }),
 
                 // Webpack dependency graph and other stats as JSON
-                new StatsPlugin('bundleStats.json', {
+                new StatsPlugin('../build/bundleStats.json', {
                     chunkModules: true,
                     exclude: [/node_modules[\\\/]react/],
                 }),

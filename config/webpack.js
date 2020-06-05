@@ -50,7 +50,7 @@ module.exports = (PRODUCTION, SERVER) => {
         output: {
             // Next line is not used in dev but WebpackDevServer crashes
             // without it:
-            path: paths.appBuild,
+            path: paths.appPublic,
             // Add /* filename */ comments to generated require()s in the output.
             pathinfo: true,
             filename: assetBaseDir + 'js/[name].[hash:8].js',
