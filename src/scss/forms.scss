@@ -4,7 +4,7 @@
 }
 
 select {
-    @apply appearance-none w-full bg-white border border-gray-300 text-base text-gray-800 py-2 pl-4 pr-8 rounded leading-tight bg-white;
+    @apply appearance-none w-full bg-white border border-gray-300 text-base text-gray-800 py-2 pl-4 pr-8 h-10;
 
     background:
         linear-gradient(45deg, transparent 50%, theme('colors.blue.700') 50%),

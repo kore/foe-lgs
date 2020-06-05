@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import find from 'lodash/find'
 
 import known from './data/buildings'
+import Select from './settings/select'
 
 const Overview = ({ selected, buildings, addBuidling, removeBuilding, selectBuidling }) => {
     const [value, setValue] = useState()
@@ -43,23 +44,18 @@ const Overview = ({ selected, buildings, addBuidling, removeBuilding, selectBuid
                 </div>
             })}
         </div>
-        <div className="mt-4 flex justify-around">
-            <select
+        <div className="mt-4 flex justify-around items-end">
+            <Select
+                name={t("Great Buildings")}
                 value={value}
-                onChange={(event) => {
-                    setValue(event.currentTarget.value)
-                }}>
-                <option value="">{t("Please Select")}</option>
-                {known.map((building) => {
-                if (find(buildings, { id: building.id })) {
-                    return null
-                }
-
-                return <option key={building.id} value={building.id}>{t(building.name)}</option>
-            })}
-            </select>
+                values={known.map((building) => {
+                    return { key: building.id, value: t(building.name) }
+                })}
+                update={(value) => {
+                    setValue(value)
+                }} />
             <button
-                className="ml-2"
+                className="px-4 py-2 ml-2 h-10"
                 disabled={!value}
                 onClick={() => {
                     setValue(null)
