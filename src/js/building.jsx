@@ -180,6 +180,8 @@ const Building = ({ building, data, name, percent, updateBuilding }) => {
                     inputField.setSelectionRange(0, 99999)
 
                     document.execCommand("copy")
+
+                    inputField.blur()
                 }}>
                 📋
             </button>
