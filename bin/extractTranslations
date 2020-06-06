@@ -4,7 +4,7 @@
 $allTranslations = json_decode(file_get_contents(__DIR__ . '/../src/js/data/translations.json'));
 foreach ($allTranslations as $language => $translations) {
     file_put_contents(
-        __DIR__ . '/../public/assets/' . $language . '.json',
+        __DIR__ . '/../src/assets/' . $language . '.json',
         json_encode($translations)
     );
 }
