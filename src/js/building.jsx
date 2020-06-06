@@ -48,7 +48,7 @@ const Building = ({ building, name, percent, updateBuilding }) => {
             }).then((data) => {
                 setData(data)
             })
-    }, [building])
+    }, [building.id])
 
     if (!data) {
         return null
