@@ -23,7 +23,7 @@ foreach ($xPath->query('//table//big//a') as $buildingLink) {
         'id' => substr(md5(trim($buildingLink->textContent)), 0, 8),
         'name' => trim($buildingLink->textContent),
         'link' => 'https://forgeofempires.fandom.com' . $buildingLink->getAttribute('href'),
-        'ranks' => [],
+        'levels' => [],
     ];
 }
 
@@ -32,7 +32,7 @@ foreach ($buildings as $buildingNumber => $building) {
     $buildingHtml->loadHTML(get($building->link));
 
     $xPath = new \DOMXPath($buildingHtml);
-    echo "Loading ", $building->name, PHP_EOL;
+    echo "Loading ", $building->name, ' … ';
     foreach ($xPath->query('//div[@class="tabber"]//div[@class="tabbertab"]') as $rankTable) {
         $level = (int) substr($rankTable->getAttribute('title'), 4);
         $building->levels[$level] = (object) [
@@ -77,6 +77,7 @@ foreach ($buildings as $buildingNumber => $building) {
             }
         }
     }
+    echo min(array_keys($building->levels)), ' -> ', max(array_keys($building->levels)), PHP_EOL;
 }
 
 usort(
@@ -86,6 +87,27 @@ usort(
     }
 );
 
-file_put_contents(__DIR__ . '/../src/js/data/buildings.json', json_encode($buildings));
+file_put_contents(
+    __DIR__ . '/../src/js/data/buildings.json',
+    json_encode(
+        array_map(
+            function (object $building): object {
+                return (object) [
+                    'id' => $building->id,
+                    'name' => $building->name,
+                ];
+            },
+            $buildings
+        ),
+        JSON_PRETTY_PRINT
+    )
+);
+
+foreach ($buildings as $building) {
+    file_put_contents(
+        __DIR__ . '/../src/assets/buidling.' . $building->id . '.json',
+        json_encode($building, JSON_PRETTY_PRINT)
+    );
+}
 
 echo "Done", PHP_EOL;
