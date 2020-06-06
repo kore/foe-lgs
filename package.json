@@ -65,7 +65,7 @@
     },
     "scripts": {
         "start": "node bin/start.js",
-        "build": "node bin/build.js",
+        "build": "bin/extractTranslations && node bin/build.js",
         "deploy": "yarn run build && scp -r public/* privat-web:foe.k023.de/public/",
         "format": "eslint --fix --ext .js --ext .jsx -c config/.eslintrc.json src/js/",
         "check": "eslint --ext .js --ext .jsx -c config/.eslintrc.json src/js/"
