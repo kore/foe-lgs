@@ -1,5 +1,5 @@
 import { h } from 'preact'
-import { useState, useContext } from 'preact/hooks'
+import { useState, useEffect, useContext } from 'preact/hooks'
 import { TranslateContext } from '@denysvuika/preact-translate'
 import { connect } from 'react-redux'
 import find from 'lodash-es/find'
@@ -32,11 +32,25 @@ const calculateRankRequirements = (required, ranks, percent) => {
     return calculatedRanks
 }
 
-const Building = ({ building, data, name, percent, updateBuilding }) => {
+const Building = ({ building, name, percent, updateBuilding }) => {
     const [include = null, setInclude] = useState()
+    const [data = null, setData] = useState()
     const { t } = useContext(TranslateContext)
 
-    if (!building || !data) {
+    if (!building) {
+        return null
+    }
+
+    useEffect(() => {
+        fetch('/assets/building.' + building.id + '.json')
+            .then((response) => {
+                return response.json()
+            }).then((data) => {
+                setData(data)
+            })
+    }, [building])
+
+    if (!data) {
         return null
     }
 
@@ -189,10 +203,9 @@ const Building = ({ building, data, name, percent, updateBuilding }) => {
 }
 
 export default connect(
-    ({ selected, buildings, known, settings }, props) => {
+    ({ selected, buildings, settings }, props) => {
         return {
             building: find(buildings, { id: selected }),
-            data: find(known, { id: selected }),
             name: settings.name || 'Player',
             percent: settings.percent || 90,
             ...props,

@@ -11,6 +11,7 @@ module.exports = (config, PRODUCTION, SERVER) => {
             },
             plugins: [
                 new LodashModuleReplacementPlugin({
+                    shorthands: true,
                 })
             ],
         },

@@ -5,8 +5,9 @@ import { connect } from 'react-redux'
 import find from 'lodash-es/find'
 
 import Select from './settings/select'
+import known from './data/buildings.json'
 
-const Overview = ({ selected, buildings, known, addBuidling, removeBuilding, selectBuidling }) => {
+const Overview = ({ selected, buildings, addBuidling, removeBuilding, selectBuidling }) => {
     const [value, setValue] = useState()
     const { t } = useContext(TranslateContext)
 
@@ -47,9 +48,11 @@ const Overview = ({ selected, buildings, known, addBuidling, removeBuilding, sel
             <Select
                 name={t("Great Buildings")}
                 value={value}
-                values={known.map((building) => {
+                values={[
+                    { key: null, value: t('Please Select') }
+                ].concat(known.map((building) => {
                     return { key: building.id, value: t(building.name) }
-                })}
+                }))}
                 update={(value) => {
                     setValue(value)
                 }} />
@@ -67,11 +70,10 @@ const Overview = ({ selected, buildings, known, addBuidling, removeBuilding, sel
 }
 
 export default connect(
-    ({ selected, buildings, known }, props) => {
+    ({ selected, buildings }, props) => {
         return {
             selected,
             buildings,
-            known,
             ...props,
         }
     },

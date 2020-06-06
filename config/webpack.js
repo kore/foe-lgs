@@ -6,14 +6,6 @@ const env = require('./env')
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin')
 const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin')
 
-// Webpack uses `publicPath` to determine where the app is being served from.
-// In development, we always serve from the root. This makes config easier.
-const publicPath = '/'
-// `publicUrl` is just like `publicPath`, but we will provide it to our app
-// as %PUBLIC_URL% in `index.html` and `process.env.PUBLIC_URL` in JavaScript.
-// Omit trailing slash as %PUBLIC_PATH%/xyz looks better than %PUBLIC_PATH%xyz.
-const publicUrl = ''
-
 module.exports = (PRODUCTION, SERVER) => {
     if (typeof PRODUCTION === 'undefined') {
         return console.error('Variable PRODUCTION must be defined.')
@@ -56,7 +48,7 @@ module.exports = (PRODUCTION, SERVER) => {
             filename: assetBaseDir + 'js/[name].[hash:8].js',
             chunkFilename: assetBaseDir + 'js/[name].[hash:8].chunk.js',
             // This is the URL that app is served from. We use "/" in development.
-            publicPath: publicPath,
+            publicPath: '/',
             // Point sourcemap entries to original disk location (format as URL on Windows)
             devtoolModuleFilenameTemplate: (info) => {
                 return PRODUCTION
