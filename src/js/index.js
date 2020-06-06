@@ -12,8 +12,8 @@ import Building from './building'
 import translations from './data/translations'
 
 (function() {
-    if('serviceWorker' in navigator) {
-        // navigator.serviceWorker.register('/service-worker.js')
+    if (PRODUCTION && 'serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js')
     }
 })()
 
