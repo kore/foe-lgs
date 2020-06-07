@@ -36,6 +36,7 @@ const calculateRankRequirements = (required, ranks, percent) => {
 
 const Building = ({ building, percent }) => {
     const [include = null, setInclude] = useState()
+    const [ranks = null, setRanks] = useState()
     const [data = null, setData] = useState()
     const { t } = useContext(TranslateContext)
 
@@ -50,27 +51,35 @@ const Building = ({ building, percent }) => {
             }).then((data) => {
                 setData(data)
             })
-    }, [building])
+    }, [building && building.id])
+
+    useEffect(() => {
+        if (!data) {
+            return null
+        }
+
+        let rankRequirements = null
+        if (data.levels[building.level]) {
+            rankRequirements = calculateRankRequirements(
+                data.levels[building.level].required,
+                data.levels[building.level].ranks,
+                percent
+            )
+        }
+
+        if (rankRequirements) {
+            const initialInclude = {}
+            rankRequirements.map((rank) => {
+                initialInclude[rank.rank] = Math.max(0, rank.ownShare) === building.fps
+            })
+
+            setInclude(initialInclude)
+        }
+        setRanks(rankRequirements)
+    }, [building, data])
 
     if (!building || !data) {
         return null
-    }
-
-    let ranks = null
-    if (data.levels[building.level]) {
-        ranks = calculateRankRequirements(
-            data.levels[building.level].required,
-            data.levels[building.level].ranks,
-            percent
-        )
-    }
-
-    if (!include && ranks) {
-        const initialInclude = {}
-        ranks.map((rank) => {
-            initialInclude[rank.rank] = Math.max(0, rank.ownShare) === building.fps
-        })
-        setInclude(initialInclude)
     }
 
     return <div>
@@ -79,22 +88,22 @@ const Building = ({ building, percent }) => {
             building={building}
             setInclude={setInclude}
         />
-        <Progress
+        {ranks && <Progress
             building={building}
             ranks={ranks}
             required={data.levels[building.level].required}
-        />
-        <Ranks
+        />}
+        {ranks && <Ranks
             building={building}
             ranks={ranks}
             include={include}
             setInclude={setInclude}
-        />
-        <Announcement
+        />}
+        {ranks && <Announcement
             building={{ ...data, ...building }}
             ranks={ranks}
             include={include}
-        />
+        />}
     </div>
 }
 
