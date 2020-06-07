@@ -154,6 +154,7 @@ module.exports = {
         mode: 'all',
         content: [
             './src/**/*.jsx',
+            './src/**/*.scss',
         ],
     },
 }
