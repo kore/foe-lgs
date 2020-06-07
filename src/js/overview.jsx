@@ -28,17 +28,16 @@ const Overview = ({ selected, buildings, addBuidling, removeBuilding, selectBuid
                 return <div
                     key={building.id}
                     className={`card grid grid-rows-1${building.id === selected ? ' card--selected' : ''}`}>
-                    <h3>{t(buildingData.name)}</h3>
-                    <h4 className="text-sm font-hairline">Level {building.level}</h4>
-                    <div className="flex justify-around mt-4">
+                    <button
+                        className="appearance-none"
+                        onClick={() => { selectBuidling(building.id) } }>
+                        <h3>{t(buildingData.name)}</h3>
+                        <h4 className="text-sm font-hairline">Level {building.level}</h4>
+                    </button>
+                    <div className="flex justify-end mt-4">
                         <button
                             onClick={() => { removeBuilding(building.id) } }>
                             🚮
-                        </button>
-                        <button
-                            className="button--primary"
-                            onClick={() => { selectBuidling(building.id) } }>
-                            {t("Select")}
                         </button>
                     </div>
                 </div>

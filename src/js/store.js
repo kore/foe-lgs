@@ -9,6 +9,7 @@ const storeActions = {
         return {
             ...state,
             buildings: state.buildings.concat([action.building]),
+            selected: action.building.id,
         }
     },
     'Building.update': (state, action) => {

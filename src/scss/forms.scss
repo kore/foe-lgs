@@ -51,4 +51,8 @@ button {
             @apply bg-blue-700;
         }
     }
+
+    &.appearance-none {
+        box-shadow: none;
+    }
 }
