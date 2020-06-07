@@ -22,7 +22,7 @@ const Overview = ({ selected, buildings, addBuidling }) => {
 
     return <div>
         <a href="https://github.com/kore/foe-lgs" className="beta">beta</a>
-        <h1>{t('Great Buildings')}</h1>
+        <h2>{t('Great Buildings')}</h2>
         <div className="grid grid-cols-3 sm:grid-cols-2 m:grid-cols-3 gap-4">
             {buildings.map((building) => {
                 return <Building

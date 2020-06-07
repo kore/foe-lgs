@@ -13,7 +13,7 @@ const Ranks = ({ building, ranks, include, setInclude, updateBuilding }) => {
     }
 
     return <Fragment>
-        <h2 className="mt-4">{t("Ranks")}</h2>
+        <h3 className="mt-4">{t("Ranks")}</h3>
         <table className="w-full">
             <thead>
                 <tr>

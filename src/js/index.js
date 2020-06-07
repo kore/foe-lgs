@@ -20,11 +20,20 @@ import translations from './data/translations'
 const App = () => {
     return <Provider store={store}>
         <TranslateProvider lang="de" translations={translations}>
-            <div className="container mx-auto px-2 pb-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <h1 className="text-center">FoE Calculator</h1>
+            <div className="container mx-auto px-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <Overview />
                 <Building />
                 <Settings />
             </div>
+            <footer>
+                <p>
+                    <a href="https://github.com/kore/foe-lgs">Forge of Empires
+                    Calculator</a> by <a href="https://kore-nordmann.de">Kore
+                    Nordmann</a>
+                </p>
+                <p>All rights reserved &amp; no guarantee for the data – this is a playground project.</p>
+            </footer>
         </TranslateProvider>
     </Provider>
 }

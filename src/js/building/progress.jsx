@@ -14,7 +14,7 @@ const Progress = ({ building, required, ranks }) => {
 
     const investPercentage = (building.fps / fullOwnInvest * 100).toFixed(0)
     return <Fragment>
-        <h2 className="mt-4">{t("Progress")}</h2>
+        <h3 className="mt-4">{t("Progress")}</h3>
         <div className="shadow w-full bg-grey-light flex">
             <div className="bg-blue-500 text-xs leading-none py-1 text-center text-white" style={{ width: `${investPercentage}%` }}>
                 {investPercentage > 50 ? `${building.fps + t(" of ") + fullOwnInvest} (${required})` : ''}

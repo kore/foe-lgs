@@ -11,6 +11,10 @@ module.exports = {
             flex: {
                 '0-0-05': '0 0 50%',
             },
+            fontFamily: {
+                display: ['sans-serif'],
+                body: ['sans-serif'],
+            },
             fontSize: {
                 'icon-size': '2.5rem',
             },

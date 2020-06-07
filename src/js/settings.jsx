@@ -26,7 +26,7 @@ const Settings = ({ settings, setSetting }) => {
             }}>
             {visible ? '-' : '+'}
         </button>
-        <h1>{t("Settings")}</h1>
+        <h2>{t("Settings")}</h2>
         <div style={{ display: visible ? 'block' : 'none' }}>
             <Input
                 name={t("Name")}

@@ -74,7 +74,7 @@ const Building = ({ building, percent }) => {
     }
 
     return <div>
-        <h1>{t(data.name)}</h1>
+        <h2>{t(data.name)}</h2>
         <Settings
             building={building}
             setInclude={setInclude}
