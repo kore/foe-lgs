@@ -151,7 +151,6 @@ module.exports = {
         borderWidth: ['responsive', 'hover', 'focus'],
     },
     purge: {
-        mode: 'all',
         content: [
             './src/**/*.jsx',
             './src/**/*.scss',
