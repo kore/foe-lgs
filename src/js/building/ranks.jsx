@@ -25,7 +25,7 @@ const Ranks = ({ building, ranks, include, setInclude, updateBuilding }) => {
             </thead>
             <tbody>
                 {ranks.map((rank) => {
-                return <tr key={rank.rank}>
+                return <tr key={rank.rank} className={!rank.fp && 'text-gray-500'}>
                     <td>
                         {include ?
                             <Checkbox
