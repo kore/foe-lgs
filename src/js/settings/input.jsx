@@ -5,7 +5,7 @@ import debounce from 'lodash-es/debounce'
 const Input = ({ update, name, initialValue, type = 'text', disabled = false }) => {
     const [value = initialValue, setValue] = useState()
     const delayedUpdate = useRef(debounce(update, 500)).current
-    const id = ('input_' + btoa(name)).replace(/=/g, '')
+    const id = (`input_${btoa(name)}`).replace(/=/g, '')
 
     return <div className="flex-grow">
         <label htmlFor={id} className="input-adornment">{name}</label>

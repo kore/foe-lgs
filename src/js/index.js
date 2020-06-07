@@ -12,7 +12,7 @@ import Building from './building'
 import translations from './data/translations'
 
 (function() {
-    if (PRODUCTION && 'serviceWorker' in navigator) {
+    if (PRODUCTION && 'serviceWorker' in navigator) { // eslint-disable-line no-undef
         navigator.serviceWorker.register('/service-worker.js')
     }
 })()

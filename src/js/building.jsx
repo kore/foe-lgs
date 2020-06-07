@@ -37,20 +37,20 @@ const Building = ({ building, name, percent, updateBuilding }) => {
     const [data = null, setData] = useState()
     const { t } = useContext(TranslateContext)
 
-    if (!building) {
-        return null
-    }
-
     useEffect(() => {
-        fetch('/assets/building.' + building.id + '.json')
+        if (!building) {
+            return null
+        }
+
+        fetch(`/assets/building.${building.id}.json`)
             .then((response) => {
                 return response.json()
             }).then((data) => {
                 setData(data)
             })
-    }, [building.id])
+    }, [building])
 
-    if (!data) {
+    if (!building || !data) {
         return null
     }
 
@@ -134,12 +134,12 @@ const Building = ({ building, name, percent, updateBuilding }) => {
             }} />
         <h2 className="mt-4">{t("Progress")}</h2>
         <div className="shadow w-full bg-grey-light flex">
-            <div className="bg-blue-500 text-xs leading-none py-1 text-center text-white" style={{ width: investPercentage + '%' }}>
-                {investPercentage > 50 ? building.fps + t(" of ") + fullOwnInvest + ' (' + data.levels[building.level].required + ')' : ''}
+            <div className="bg-blue-500 text-xs leading-none py-1 text-center text-white" style={{ width: `${investPercentage}%` }}>
+                {investPercentage > 50 ? `${building.fps + t(" of ") + fullOwnInvest} (${data.levels[building.level].required})` : ''}
             </div>
             {investPercentage <= 50 ?
-                <div className="text-xs leading-none py-1 text-right" style={{ width: (100 - investPercentage) + '%' }}>
-                    {building.fps + t(" of ") + fullOwnInvest + ' (' + data.levels[building.level].required + ')'}
+                <div className="text-xs leading-none py-1 text-right" style={{ width: `${100 - investPercentage}%` }}>
+                    {`${building.fps + t(" of ") + fullOwnInvest} (${data.levels[building.level].required})`}
                 </div> : ''}
         </div>
         <h2 className="mt-4">{t("Ranks")}</h2>

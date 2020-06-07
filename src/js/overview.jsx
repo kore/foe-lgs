@@ -4,10 +4,11 @@ import { TranslateContext } from '@denysvuika/preact-translate'
 import { connect } from 'react-redux'
 import find from 'lodash-es/find'
 
+import Building from './overview/building'
 import Select from './settings/select'
 import known from './data/buildings.json'
 
-const Overview = ({ selected, buildings, addBuidling, removeBuilding, selectBuidling }) => {
+const Overview = ({ selected, buildings, addBuidling }) => {
     const [value, setValue] = useState()
     const { t } = useContext(TranslateContext)
 
@@ -24,23 +25,12 @@ const Overview = ({ selected, buildings, addBuidling, removeBuilding, selectBuid
         <h1>{t('Great Buildings')}</h1>
         <div className="grid grid-cols-3 sm:grid-cols-2 m:grid-cols-3 gap-4">
             {buildings.map((building) => {
-                const buildingData = find(known, { id: building.id })
-                return <div
+                return <Building
+                    building={building}
+                    data={find(known, { id: building.id })}
+                    selected={building.id === selected}
                     key={building.id}
-                    className={`card grid grid-rows-1${building.id === selected ? ' card--selected' : ''}`}>
-                    <button
-                        className="appearance-none"
-                        onClick={() => { selectBuidling(building.id) } }>
-                        <h3>{t(buildingData.name)}</h3>
-                        <h4 className="text-sm font-hairline">Level {building.level}</h4>
-                    </button>
-                    <div className="flex justify-end mt-4">
-                        <button
-                            onClick={() => { removeBuilding(building.id) } }>
-                            🚮
-                        </button>
-                    </div>
-                </div>
+                />
             })}
         </div>
         <div className="mt-4 flex justify-around items-end">
@@ -48,7 +38,7 @@ const Overview = ({ selected, buildings, addBuidling, removeBuilding, selectBuid
                 name={t("Great Buildings")}
                 value={value}
                 values={[
-                    { key: null, value: t('Please Select') }
+                    { key: null, value: t('Please Select') },
                 ].concat(known.map((building) => {
                     return { key: building.id, value: t(building.name) }
                 }))}
@@ -86,18 +76,6 @@ export default connect(
                         level: 1,
                         fps: 0,
                     },
-                })
-            },
-            removeBuilding: (buildingId) => {
-                dispatch({
-                    type: 'Building.remove',
-                    building: buildingId,
-                })
-            },
-            selectBuidling: (buildingId) => {
-                dispatch({
-                    type: 'Building.select',
-                    building: buildingId,
                 })
             },
         }
