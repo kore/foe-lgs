@@ -61,6 +61,12 @@ const initialStore = {
 
 const store = createStore(
     (state, action) => {
+        /* eslint-disable */
+        if (!PRODUCTION) {
+            console.log(`🔉 Action: ${action.type}`, action)
+        }
+        /* eslint-enable */
+
         return action && storeActions[action.type] ?
             storeActions[action.type](state, action) :
             state
