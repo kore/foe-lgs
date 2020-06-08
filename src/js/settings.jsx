@@ -20,7 +20,7 @@ const Settings = ({ settings, setSetting }) => {
 
     return <div>
         <button
-            className="float-right mt-4"
+            className="float-right"
             onClick={() => {
                 setVisible(!visible)
             }}>
