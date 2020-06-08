@@ -152,6 +152,7 @@ module.exports = {
     },
     purge: {
         content: [
+            './src/**/*.tsx',
             './src/**/*.jsx',
             './src/**/*.scss',
         ],
