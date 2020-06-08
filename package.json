@@ -52,6 +52,8 @@
         "stats-webpack-plugin": "^0.7.0",
         "style-loader": "^1.2.1",
         "sw-precache-webpack-plugin": "^1.0.0",
+        "ts-loader": "^7.0.5",
+        "typescript": "^3.9.5",
         "url-loader": "^4.1.0",
         "webpack": "^4.43.0",
         "webpack-bundle-analyzer": "^3.6.0",

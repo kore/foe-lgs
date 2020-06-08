@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import find from 'lodash-es/find'
 
 import Settings from './building/settings'
-import Progress from './building/progress'
+import { Progress } from './building/progress'
 import Ranks from './building/ranks'
 import Announcement from './building/announcement'
 

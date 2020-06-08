@@ -74,7 +74,7 @@ module.exports = (PRODUCTION, SERVER) => {
             // ecosystem.  We also include JSX as a common component filename
             // extension to support some tools, although we do not recommend
             // using it.
-            extensions: ['.web.js', '.js', '.jsx', '.json', '.web.jsx'],
+            extensions: ['.web.js', '.js', '.jsx', '.ts', '.tsx', '.json', '.web.jsx'],
         },
         plugins: [
             // Makes some environment variables available to the JS code, for example:
@@ -116,6 +116,7 @@ module.exports = (PRODUCTION, SERVER) => {
                     exclude: [
                         /\.html$/,
                         /\.(js|jsx)$/,
+                        /\.(ts|tsx)$/,
                         /\.css$/,
                         /\.scss$/,
                         /\.json$/,
