@@ -1,11 +1,19 @@
-import { h } from 'preact'
+import { h, FunctionalComponent } from 'preact'
 import { useContext } from 'preact/hooks'
 import { TranslateContext } from '@denysvuika/preact-translate'
 import { connect } from 'react-redux'
 
 import Input from '../settings/input'
 
-const Settings = ({ building, setInclude, updateBuilding }) => {
+import { Building, SetInclude, UpdateBuilding } from '../types'
+
+export interface Props {
+    building: Building,
+    setInclude: SetInclude,
+    updateBuilding: UpdateBuilding,
+}
+
+const Settings: FunctionalComponent<Props> = ({ building, setInclude, updateBuilding }: Props) => {
     const { t } = useContext(TranslateContext)
 
     if (!building) {

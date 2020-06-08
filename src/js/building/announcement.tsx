@@ -1,9 +1,18 @@
-import { h } from 'preact'
+import { h, FunctionalComponent } from 'preact'
 import { useContext } from 'preact/hooks'
 import { TranslateContext } from '@denysvuika/preact-translate'
 import { connect } from 'react-redux'
 
-const Announcement = ({ name, building, ranks, include }) => {
+import { Building, Rank } from '../types'
+
+export interface Props {
+    name: string,
+    building: Building,
+    ranks: Rank[],
+    include: boolean[],
+}
+
+const Announcement: FunctionalComponent<Props> = ({ name, building, ranks, include }: Props) => {
     const { t } = useContext(TranslateContext)
 
     let investString = t('No level information available')
@@ -26,7 +35,7 @@ const Announcement = ({ name, building, ranks, include }) => {
             title="Copy to clipboard"
             className="px-4 py-2 ml-2 h-10"
             onClick={() => {
-                const inputField = document.getElementById("announcement")
+                const inputField = document.getElementById("announcement") as HTMLInputElement
 
                 inputField.select()
                 inputField.setSelectionRange(0, 99999)

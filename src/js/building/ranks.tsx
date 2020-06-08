@@ -1,11 +1,21 @@
-import { h, Fragment } from 'preact'
+import { h, FunctionalComponent, Fragment } from 'preact'
 import { useContext } from 'preact/hooks'
 import { TranslateContext } from '@denysvuika/preact-translate'
 import { connect } from 'react-redux'
 
 import Checkbox from '../settings/checkbox'
 
-const Ranks = ({ building, ranks, include, setInclude, updateBuilding }) => {
+import { Building, Rank, SetInclude, UpdateBuilding } from '../types'
+
+export interface Props {
+    building: Building,
+    ranks: Rank[],
+    include: boolean[],
+    setInclude: SetInclude,
+    updateBuilding: UpdateBuilding,
+}
+
+const Ranks: FunctionalComponent<Props> = ({ building, ranks, include, setInclude, updateBuilding }: Props) => {
     const { t } = useContext(TranslateContext)
 
     if (!ranks) {
@@ -78,7 +88,7 @@ export default connect(
     },
     (dispatch) => {
         return {
-            updateBuilding: (building) => {
+            updateBuilding: (building: Building) => {
                 dispatch({
                     type: 'Building.update',
                     ...building,
