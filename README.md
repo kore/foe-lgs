@@ -5,13 +5,16 @@ based on the following technologies:
 
 * PReact
 * Tailwind
-* Local Storage & Service Workers (for full offline) (in progress)
-* Typescript (TODO)
+* Local Storage & Service Workers (for full offline)
+* Typescript (in progress)
 
 It implements a mobile optimized version of the common necessary investment
 calculators of Innogames Forge Of Empires game.
 
-You can use this on https://foe.k023.de/
+You can use this on https://foe.k023.de/ – we now reach a Lighthouse scrore of
+93 – 100 – 93 – 100 – Full PWA. This should be maintained or improved. The
+server which runs that misses HTTP/2 and proper caching directives for static
+assets, though.
 
 ## Develop
 
