@@ -1,4 +1,4 @@
-import { h } from 'preact'
+import { h, FunctionalComponent } from 'preact'
 import { useState, useContext } from 'preact/hooks'
 import { connect } from 'react-redux'
 import { TranslateContext } from '@denysvuika/preact-translate'
@@ -6,8 +6,15 @@ import { TranslateContext } from '@denysvuika/preact-translate'
 import Input from './settings/input'
 import Select from './settings/select'
 
-const Settings = ({ settings, setSetting }) => {
-    const [visible, setVisible] = useState()
+import { SettingValues, SetSetting } from './types'
+
+export interface Props {
+    settings: SettingValues,
+    setSetting: SetSetting,
+}
+
+const Settings: FunctionalComponent<Props> = ({ settings, setSetting }: Props) => {
+    const [visible, setVisible] = useState(false)
     const { setLang, t } = useContext(TranslateContext)
 
     if (!settings.name) {
@@ -31,17 +38,16 @@ const Settings = ({ settings, setSetting }) => {
             <Input
                 name={t("Name")}
                 initialValue={settings.name}
-                update={(value) => {
+                update={(value: string) => {
                     setSetting('name', value)
-}
-                } />
+                }} />
             <Input
                 name={t("Advance (%)")}
-                initialValue={settings.percent || "90"}
-                update={(value) => {
+                type="number"
+                initialValue={`${settings.percent}` || "90"}
+                update={(value: string) => {
                     setSetting('percent', +value)
-}
-                } />
+                }} />
             <Select
                 name={t("Language")}
                 value={settings.language || "de"}
@@ -49,7 +55,7 @@ const Settings = ({ settings, setSetting }) => {
                     { key: 'de', value: 'Deutsch' },
                     { key: 'en', value: 'English' },
                 ]}
-                update={(value) => {
+                update={(value: string) => {
                     setSetting('language', value)
                     setLang(value)
                 }} />

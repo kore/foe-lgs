@@ -1,4 +1,4 @@
-import { h } from 'preact'
+import { h, FunctionalComponent } from 'preact'
 import { useState, useEffect, useContext } from 'preact/hooks'
 import { TranslateContext } from '@denysvuika/preact-translate'
 import { connect } from 'react-redux'
@@ -9,7 +9,14 @@ import { Progress } from './building/progress'
 import Ranks from './building/ranks'
 import Announcement from './building/announcement'
 
-const calculateRankRequirements = (required, ranks, percent) => {
+import { Building, Rank } from './types'
+
+export interface Props {
+    building: Building,
+    percent: number,
+}
+
+const calculateRankRequirements = (required: number, ranks: Rank[], percent: number): Rank[] => {
     let sum = 0
     let lastShare = -required
 
@@ -34,10 +41,10 @@ const calculateRankRequirements = (required, ranks, percent) => {
     return calculatedRanks
 }
 
-const Building = ({ building, percent }) => {
-    const [include = null, setInclude] = useState()
-    const [ranks = null, setRanks] = useState()
-    const [data = null, setData] = useState()
+const BuildingOverview: FunctionalComponent<Props> = ({ building, percent }: Props) => {
+    const [include, setInclude] = useState(null)
+    const [ranks, setRanks] = useState(null)
+    const [data, setData] = useState(null)
     const { t } = useContext(TranslateContext)
 
     useEffect(() => {
@@ -115,4 +122,4 @@ export default connect(
             ...props,
         }
     }
-)(Building)
+)(BuildingOverview)

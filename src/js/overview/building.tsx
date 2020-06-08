@@ -1,12 +1,22 @@
-import { h } from 'preact'
+import { h, FunctionalComponent } from 'preact'
 import { useContext } from 'preact/hooks'
 import { TranslateContext } from '@denysvuika/preact-translate'
 import { connect } from 'react-redux'
 
-const Building = ({ building, data, selected = false, removeBuilding, selectBuidling }) => {
+import { Building, RemoveBuilding, SelectBuidling } from '../types'
+
+export interface Props {
+    building: Building,
+    data: Building,
+    selected: boolean,
+    removeBuilding: RemoveBuilding,
+    selectBuidling: SelectBuidling,
+}
+
+const BuildingCard: FunctionalComponent<Props> = ({ building, data, selected = false, removeBuilding, selectBuidling }: Props) => {
     const { t } = useContext(TranslateContext)
 
-    return <div className={`card grid grid-rows-1${building.id === selected ? ' card--selected' : ''}`}>
+    return <div className={`card grid grid-rows-1${selected ? ' card--selected' : ''}`}>
         <button
             className="appearance-none"
             onClick={() => { selectBuidling(building.id) } }>
@@ -44,4 +54,4 @@ export default connect(
             },
         }
     }
-)(Building)
+)(BuildingCard)

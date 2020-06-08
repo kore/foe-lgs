@@ -1,15 +1,23 @@
-import { h } from 'preact'
+import { h, FunctionalComponent } from 'preact'
 import { useState, useContext } from 'preact/hooks'
 import { TranslateContext } from '@denysvuika/preact-translate'
 import { connect } from 'react-redux'
 import find from 'lodash-es/find'
 
-import Building from './overview/building'
+import BuildingCard from './overview/building'
 import Select from './settings/select'
 import known from './data/buildings.json'
 
-const Overview = ({ selected, buildings, addBuidling }) => {
-    const [value, setValue] = useState()
+import { Building, Rank, AddBuilding } from './types'
+
+export interface Props {
+    selected: string,
+    buildings: Building[],
+    addBuidling: AddBuilding,
+}
+
+const Overview: FunctionalComponent<Props> = ({ selected, buildings, addBuidling }: Props) => {
+    const [value, setValue] = useState('')
     const { t } = useContext(TranslateContext)
 
     buildings.sort((a, b) => {
@@ -24,8 +32,8 @@ const Overview = ({ selected, buildings, addBuidling }) => {
         <a href="https://github.com/kore/foe-lgs" className="beta">beta</a>
         <h2>{t('Great Buildings')}</h2>
         <div className="grid grid-cols-3 sm:grid-cols-2 m:grid-cols-3 gap-4">
-            {buildings.map((building) => {
-                return <Building
+            {buildings.map((building: Building) => {
+                return <BuildingCard
                     building={building}
                     data={find(known, { id: building.id })}
                     selected={building.id === selected}
@@ -68,7 +76,7 @@ export default connect(
     },
     (dispatch) => {
         return {
-            addBuidling: (building) => {
+            addBuidling: (building: string) => {
                 dispatch({
                     type: 'Building.add',
                     building: {

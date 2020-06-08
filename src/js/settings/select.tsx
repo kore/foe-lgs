@@ -1,6 +1,16 @@
-import { h } from 'preact'
+import { h, FunctionalComponent } from 'preact'
 
-const Select = ({ update, name, value, values, disabled = false }) => {
+import { UpdateFunction } from '../types'
+
+export interface Props {
+    update: UpdateFunction<string>,
+    name: string,
+    value: string,
+    values: { key: string, value: string}[],
+    disabled?: boolean,
+}
+
+const Select: FunctionalComponent<Props> = ({ update, name, value, values, disabled = false }: Props) => {
     const id = (`select_${btoa(name)}`).replace(/=/g, '')
 
     return <div className="flex-grow">

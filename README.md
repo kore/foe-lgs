@@ -6,7 +6,7 @@ based on the following technologies:
 * PReact
 * Tailwind
 * Local Storage & Service Workers (for full offline)
-* Typescript (in progress)
+* Typescript
 
 It implements a mobile optimized version of the common necessary investment
 calculators of Innogames Forge Of Empires game.
