@@ -49,6 +49,8 @@ const Overview: FunctionalComponent<Props> = ({ selected, buildings, addBuidling
                     { key: null, value: t('Please Select') },
                 ].concat(known.map((building) => {
                     return { key: building.id, value: t(building.name) }
+                }).filter((option) => {
+                    return !find(buildings, { id: option.key })
                 }))}
                 update={(value) => {
                     setValue(value)

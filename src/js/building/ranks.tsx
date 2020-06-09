@@ -35,7 +35,7 @@ const Ranks: FunctionalComponent<Props> = ({ building, ranks, include, setInclud
             </thead>
             <tbody>
                 {ranks.map((rank) => {
-                return <tr key={rank.rank} className={!rank.fp && 'text-gray-500'}>
+                    return <tr key={rank.rank} className={!rank.fp ? 'text-gray-500' : ''}>
                     <td>
                         {include ?
                             <Checkbox
