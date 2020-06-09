@@ -44,7 +44,7 @@ const Settings: FunctionalComponent<Props> = ({ settings, setSetting }: Props) =
             <Input
                 name={t("Advance (%)")}
                 type="number"
-                initialValue={`${settings.percent}` || "90"}
+                initialValue={`${settings.percent || 90}`}
                 update={(value: string) => {
                     setSetting('percent', +value)
                 }} />
