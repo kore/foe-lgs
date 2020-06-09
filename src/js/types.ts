@@ -7,7 +7,7 @@ export interface Building {
 
 export type AddBuilding = (building: string) => void
 
-export type UpdateBuilding = (building: Building) => void
+export type UpdateBuilding = (building: { id: string, fps?: number, level?: number }) => void
 
 export type SelectBuidling = (buildingId: string) => void
 

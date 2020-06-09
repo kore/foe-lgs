@@ -3,6 +3,7 @@ import Storage from './storage'
 import throttle from 'lodash-es/throttle'
 import filter from 'lodash-es/filter'
 import findIndex from 'lodash-es/findIndex'
+import pick from 'lodash-es/pick'
 
 const storeActions = {
     'Building.add': (state, action) => {
@@ -16,8 +17,7 @@ const storeActions = {
         const buildingIndex = findIndex(state.buildings, { id: action.id })
         const building = {
             ...state.buildings[buildingIndex],
-            level: action.level,
-            fps: action.fps,
+            ...pick(action, ['level', 'fps'])
         }
         const buildings = [...state.buildings]
         buildings[buildingIndex] = building

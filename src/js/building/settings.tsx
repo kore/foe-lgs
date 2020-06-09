@@ -23,7 +23,7 @@ const Settings: FunctionalComponent<Props> = ({ building, setInclude, updateBuil
     return <div className="grid grid-cols-2 gap-4">
         <div className="flex justify-around items-end">
             <Input
-                key={building.id}
+                key={JSON.stringify(building)}
                 name={t("Level")}
                 initialValue={`${building.level}`}
                 type="number"
@@ -49,18 +49,17 @@ const Settings: FunctionalComponent<Props> = ({ building, setInclude, updateBuil
             </button>
         </div>
         <Input
-            key={building.id}
+            key={JSON.stringify(building)}
             name={t("Invested FPs")}
             initialValue={`${building.fps}`}
             type="number"
-            update={(value) => {
+            update={((value) => {
                 setInclude(null)
                 updateBuilding({
                     id: building.id,
                     fps: +value,
-                    level: building.level,
                 })
-            }} />
+            }).bind(building)} />
     </div>
 }
 
