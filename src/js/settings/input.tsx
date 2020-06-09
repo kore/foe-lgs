@@ -13,7 +13,7 @@ export interface Props {
 }
 
 const Input: FunctionalComponent<Props> = ({ update, name, initialValue, type = 'text', disabled = false }: Props) => {
-    const [value, setValue] = useState(initialValue)
+    const [value, setValue] = useState(null)
     const delayedUpdate = useRef(debounce(update, 500)).current
     const id = (`input_${btoa(name)}`).replace(/=/g, '')
 
@@ -22,7 +22,7 @@ const Input: FunctionalComponent<Props> = ({ update, name, initialValue, type = 
         <input
             id={id}
             type={type}
-            value={value}
+            value={value || initialValue}
             placeholder={name}
             disabled={disabled}
             onChange={(event) => {
