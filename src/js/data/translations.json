@@ -61,7 +61,10 @@
         "Settings": "Einstellungen",
         "Name": "Name",
         "Advance (%)": "Förderung (%)",
-        "Language": "Sprache"
+        "Language": "Sprache",
+
+        "All rights reserved &amp; no guarantee for the data – this is a playground project.": "Alle Rechte vorbehalten; Keine Garantien für die Daten – dies ist nur ein Spielprojekt.",
+        "This page needs no data privacy statement: All data is stored in your browser and never leaves your system.": "Diese Seite benötigt keine Datenschutzerklärung: Alle Daten werden ausschließlich im Browser gespeichert und verlassen nie das System des Nutzers."
     },
     "en": {
     }

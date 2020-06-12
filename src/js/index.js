@@ -8,6 +8,7 @@ import '../scss/app.scss'
 import Overview from './overview'
 import Settings from './settings'
 import Building from './building'
+import Footer from './footer'
 
 import translations from './data/translations'
 
@@ -26,14 +27,7 @@ const App = () => {
                 <Building />
                 <Settings />
             </div>
-            <footer>
-                <p>
-                    <a href="https://github.com/kore/foe-lgs">Forge of Empires
-                    Calculator</a> by <a href="https://kore-nordmann.de">Kore
-                    Nordmann</a>
-                </p>
-                <p>All rights reserved &amp; no guarantee for the data – this is a playground project.</p>
-            </footer>
+            <Footer />
         </TranslateProvider>
     </Provider>
 }
