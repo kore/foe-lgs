@@ -4,7 +4,7 @@
     "link": "https:\/\/forgeofempires.fandom.com\/wiki\/Voyager_V1",
     "levels": {
         "1": {
-            "required": false,
+            "required": 70,
             "ranks": [
                 {
                     "rank": 1,
@@ -39,7 +39,7 @@
             ]
         },
         "2": {
-            "required": false,
+            "required": 100,
             "ranks": [
                 {
                     "rank": 1,
@@ -74,7 +74,7 @@
             ]
         },
         "3": {
-            "required": false,
+            "required": 190,
             "ranks": [
                 {
                     "rank": 1,
@@ -109,7 +109,7 @@
             ]
         },
         "4": {
-            "required": false,
+            "required": 280,
             "ranks": [
                 {
                     "rank": 1,
@@ -144,7 +144,7 @@
             ]
         },
         "5": {
-            "required": false,
+            "required": 380,
             "ranks": [
                 {
                     "rank": 1,
@@ -179,7 +179,7 @@
             ]
         },
         "6": {
-            "required": false,
+            "required": 480,
             "ranks": [
                 {
                     "rank": 1,
@@ -214,7 +214,7 @@
             ]
         },
         "7": {
-            "required": false,
+            "required": 590,
             "ranks": [
                 {
                     "rank": 1,
@@ -249,7 +249,7 @@
             ]
         },
         "8": {
-            "required": false,
+            "required": 710,
             "ranks": [
                 {
                     "rank": 1,
@@ -284,7 +284,7 @@
             ]
         },
         "9": {
-            "required": false,
+            "required": 810,
             "ranks": [
                 {
                     "rank": 1,
@@ -319,7 +319,7 @@
             ]
         },
         "10": {
-            "required": false,
+            "required": 930,
             "ranks": [
                 {
                     "rank": 1,
@@ -350,6 +350,3296 @@
                     "fp": 0,
                     "medals": 109,
                     "bp": 1
+                }
+            ]
+        },
+        "11": {
+            "required": 954,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 120,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 60,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 20,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 0,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "12": {
+            "required": 978,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 130,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 65,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 20,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 0,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "13": {
+            "required": 1002,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 145,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 75,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 25,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 0,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "14": {
+            "required": 1027,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 160,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 80,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 25,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 0,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "15": {
+            "required": 1053,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 175,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 90,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 30,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 0,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "16": {
+            "required": 1079,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 185,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 95,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 30,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 0,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "17": {
+            "required": 1106,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 200,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 100,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 35,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 0,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "18": {
+            "required": 1134,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 215,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 110,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 35,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 0,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "19": {
+            "required": 1162,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 230,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 115,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 40,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 0,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "20": {
+            "required": 1191,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 245,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 125,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 40,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 0,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "21": {
+            "required": 1221,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 260,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 130,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 45,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 0,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "22": {
+            "required": 1251,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 275,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 140,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 45,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 0,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "23": {
+            "required": 1283,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 290,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 145,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 50,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 15,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "24": {
+            "required": 1315,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 305,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 155,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 50,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 15,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "25": {
+            "required": 1347,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 320,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 160,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 55,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 15,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "26": {
+            "required": 1381,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 335,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 170,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 55,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 15,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "27": {
+            "required": 1416,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 355,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 180,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 60,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 15,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "28": {
+            "required": 1451,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 370,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 185,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 60,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 15,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "29": {
+            "required": 1487,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 385,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 195,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 65,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 15,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "30": {
+            "required": 1524,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 400,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 200,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 65,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 15,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "31": {
+            "required": 1563,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 420,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 210,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 70,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 20,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "32": {
+            "required": 1602,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 435,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 220,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 75,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 20,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "33": {
+            "required": 1642,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 450,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 225,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 75,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 20,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "34": {
+            "required": 1683,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 465,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 235,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 80,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 20,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "35": {
+            "required": 1725,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 485,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 245,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 80,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 20,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "36": {
+            "required": 1768,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 500,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 250,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 85,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 20,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "37": {
+            "required": 1812,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 515,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 260,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 85,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 20,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "38": {
+            "required": 1857,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 535,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 270,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 90,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 25,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "39": {
+            "required": 1904,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 550,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 275,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 90,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 25,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "40": {
+            "required": 1951,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 570,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 285,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 95,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 25,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "41": {
+            "required": 2000,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 585,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 295,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 100,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 25,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "42": {
+            "required": 2050,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 605,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 305,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 100,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 25,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "43": {
+            "required": 2101,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 620,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 310,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 105,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 25,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "44": {
+            "required": 2154,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 640,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 320,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 105,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 25,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "45": {
+            "required": 2208,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 655,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 330,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 110,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 30,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "46": {
+            "required": 2263,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 675,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 340,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 115,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 30,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "47": {
+            "required": 2319,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 690,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 345,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 115,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 30,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "48": {
+            "required": 2377,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 710,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 355,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 120,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 30,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "49": {
+            "required": 2437,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 730,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 365,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 120,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 30,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "50": {
+            "required": 2498,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 745,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 375,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 125,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 30,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "51": {
+            "required": 2560,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 765,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 385,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 130,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 35,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "52": {
+            "required": 2624,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 780,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 390,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 130,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 35,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "53": {
+            "required": 2690,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 800,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 400,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 135,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 35,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "54": {
+            "required": 2757,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 820,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 410,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 135,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 35,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "55": {
+            "required": 2826,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 835,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 420,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 140,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 35,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "56": {
+            "required": 2896,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 855,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 430,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 145,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 35,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "57": {
+            "required": 2969,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 875,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 440,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 145,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 35,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 5,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "58": {
+            "required": 3043,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 890,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 445,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 150,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 40,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "59": {
+            "required": 3119,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 910,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 455,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 150,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 40,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "60": {
+            "required": 3197,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 930,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 465,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 155,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 40,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "61": {
+            "required": 3277,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 945,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 475,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 160,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 40,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "62": {
+            "required": 3359,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 965,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 485,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 160,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 40,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "63": {
+            "required": 3443,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 985,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 495,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 165,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 40,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "64": {
+            "required": 3529,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1005,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 505,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 170,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 45,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "65": {
+            "required": 3617,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1025,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 515,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 170,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 45,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "66": {
+            "required": 3707,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1040,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 520,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 175,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 45,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "67": {
+            "required": 3800,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1060,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 530,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 175,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 45,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "68": {
+            "required": 3895,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1080,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 540,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 180,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 45,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "69": {
+            "required": 3993,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1100,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 550,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 185,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 45,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "70": {
+            "required": 4092,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1120,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 560,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 185,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 45,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "71": {
+            "required": 4195,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1140,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 570,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 190,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 50,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "72": {
+            "required": 4299,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1155,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 580,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 195,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 50,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "73": {
+            "required": 4407,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1175,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 590,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 195,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 50,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "74": {
+            "required": 4517,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1195,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 600,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 200,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 50,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "75": {
+            "required": 4630,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1215,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 610,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 205,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 50,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "76": {
+            "required": 4746,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1235,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 620,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 205,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 50,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "77": {
+            "required": 4864,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1255,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 630,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 210,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 55,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "78": {
+            "required": 4986,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1275,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 640,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 215,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 55,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "79": {
+            "required": 5111,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1295,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 650,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 215,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 55,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "80": {
+            "required": 5238,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1315,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 660,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 220,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 55,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "81": {
+            "required": 5369,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1335,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 670,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 225,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 55,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "82": {
+            "required": 5504,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1355,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 680,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 225,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 55,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "83": {
+            "required": 5641,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1375,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 690,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 230,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 60,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "84": {
+            "required": 5782,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1395,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 700,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 235,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 60,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "85": {
+            "required": 5927,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1415,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 710,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 235,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 60,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "86": {
+            "required": 6075,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1435,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 720,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 240,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 60,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "87": {
+            "required": 6227,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1455,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 730,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 245,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 60,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "88": {
+            "required": 6382,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1475,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 740,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 245,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 60,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 10,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "89": {
+            "required": 6542,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1495,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 750,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 250,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 65,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 15,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "90": {
+            "required": 6705,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1515,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 760,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 255,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 65,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 15,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "91": {
+            "required": 6873,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1535,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 770,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 255,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 65,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 15,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "92": {
+            "required": 7045,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1555,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 780,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 260,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 65,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 15,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "93": {
+            "required": 7221,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1575,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 790,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 265,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 65,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 15,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "94": {
+            "required": 7401,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1595,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 800,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 265,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 65,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 15,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "95": {
+            "required": 7586,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1615,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 810,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 270,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 70,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 15,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "96": {
+            "required": 7776,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1640,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 820,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 275,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 70,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 15,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "97": {
+            "required": 7971,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1660,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 830,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 275,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 70,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 15,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "98": {
+            "required": 8170,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1680,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 840,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 280,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 70,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 15,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "99": {
+            "required": 8374,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1700,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 850,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 285,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 70,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 15,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "100": {
+            "required": 8583,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1720,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 860,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 285,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 70,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 15,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "101": {
+            "required": 8798,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1740,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 870,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 290,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 75,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 15,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "102": {
+            "required": 9018,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1760,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 880,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 295,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 75,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 15,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "103": {
+            "required": 9243,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1780,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 890,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 295,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 75,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 15,
+                    "medals": 0,
+                    "bp": 0
+                }
+            ]
+        },
+        "104": {
+            "required": 9474,
+            "ranks": [
+                {
+                    "rank": 1,
+                    "fp": 1805,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 2,
+                    "fp": 905,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 3,
+                    "fp": 300,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 4,
+                    "fp": 75,
+                    "medals": 0,
+                    "bp": 0
+                },
+                {
+                    "rank": 5,
+                    "fp": 15,
+                    "medals": 0,
+                    "bp": 0
                 }
             ]
         }

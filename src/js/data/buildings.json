@@ -44,10 +44,6 @@
         "name": "Deal Castle"
     },
     {
-        "id": "9c7e6cde",
-        "name": "Dynamic Tower"
-    },
-    {
         "id": "f6662f57",
         "name": "Frauenkirche of Dresden"
     },
@@ -154,6 +150,10 @@
     {
         "id": "ea61791d",
         "name": "Tower of Babel"
+    },
+    {
+        "id": "2f6409ac",
+        "name": "Truce Tower"
     },
     {
         "id": "e0427c88",
