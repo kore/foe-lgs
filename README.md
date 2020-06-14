@@ -11,10 +11,8 @@ based on the following technologies:
 It implements a mobile optimized version of the common necessary investment
 calculators of Innogames Forge Of Empires game.
 
-You can use this on https://foe.k023.de/ – we now reach a Lighthouse scrore of
-93 – 100 – 93 – 100 – Full PWA. This should be maintained or improved. The
-server which runs that misses HTTP/2 and proper caching directives for static
-assets, though.
+You can use this on https://foe.k023.de/ – we now reach **a Lighthouse score of
+100%** – this should be maintained.
 
 ## Develop
 
