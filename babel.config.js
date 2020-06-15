@@ -13,6 +13,11 @@ module.exports = function (api) {
             // modules:false is required to enable webpack chunk splitting
             ['@babel/preset-env', { modules: false }],
             '@babel/preset-react',
+            ['@babel/preset-typescript', {
+                "isTsx": true,
+                "jsxPragma": "h",
+                "allowNamespaces": true,
+            }]
         ],
         plugins: plugins,
         env: {

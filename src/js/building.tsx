@@ -25,7 +25,7 @@ const calculateRankRequirements = (required: number, ranks: Rank[], percent: num
 
         const ownShare = Math.max(
             lastShare,
-            required - sum - 2 * invest
+            required - sum - 2 * invest,
         )
 
         lastShare = ownShare
@@ -58,7 +58,7 @@ const BuildingOverview: FunctionalComponent<Props> = ({ building, percent }: Pro
             }).then((data) => {
                 setData(data)
             })
-    }, [building && building.id])
+    }, [building])
 
     useEffect(() => {
         if (!data) {
@@ -70,7 +70,7 @@ const BuildingOverview: FunctionalComponent<Props> = ({ building, percent }: Pro
             rankRequirements = calculateRankRequirements(
                 data.levels[building.level].required,
                 data.levels[building.level].ranks,
-                percent
+                percent,
             )
         }
 
@@ -83,7 +83,7 @@ const BuildingOverview: FunctionalComponent<Props> = ({ building, percent }: Pro
             setInclude(initialInclude)
         }
         setRanks(rankRequirements)
-    }, [building, data])
+    }, [building, data, percent])
 
     if (!building || !data) {
         return null
@@ -121,5 +121,5 @@ export default connect(
             percent: settings.percent || 90,
             ...props,
         }
-    }
+    },
 )(BuildingOverview)

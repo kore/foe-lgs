@@ -59,7 +59,7 @@ const Settings: FunctionalComponent<Props> = ({ building, setInclude, updateBuil
                     id: building.id,
                     fps: +value,
                 })
-            }).bind(building)} />
+            })} />
     </div>
 }
 
@@ -78,5 +78,5 @@ export default connect(
                 })
             },
         }
-    }
+    },
 )(Settings)

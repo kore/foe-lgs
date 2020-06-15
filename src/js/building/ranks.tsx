@@ -36,12 +36,12 @@ const Ranks: FunctionalComponent<Props> = ({ building, ranks, include, setInclud
             <tbody>
                 {ranks.map((rank) => {
                     return <tr key={rank.rank} className={!rank.fp ? 'text-gray-500' : ''}>
-                    <td>
-                        {include ?
-                            <Checkbox
-                                value={include[rank.rank]}
-                                name={rank.rank}
-                                update={(value) => {
+                        <td>
+                            {include ?
+                                <Checkbox
+                                    value={include[rank.rank]}
+                                    name={rank.rank}
+                                    update={(value) => {
                                     setInclude({
                                         ...include,
                                         [rank.rank]: value,
@@ -49,20 +49,20 @@ const Ranks: FunctionalComponent<Props> = ({ building, ranks, include, setInclud
                                 }} /> :
                             rank.rank
                         }
-                    </td>
-                    <td className="text-right">
-                        {Math.max(0, rank.ownShare)}
-                        {rank.ownShare < 0 ? <span className="text-red-500"> ⚠</span> : ''}
-                        {rank.ownShare > building.fps ? <span className="text-sm text-gray-500"> (+{rank.ownShare - building.fps})</span> : ''}
-                    </td>
-                    <td className="text-right">
-                        {rank.invest}
-                        <span className="text-sm text-gray-500"> ({rank.fp})</span>
-                    </td>
-                    <td className="text-right">
-                        <button
-                            className="p-1"
-                            onClick={() => {
+                        </td>
+                        <td className="text-right">
+                            {Math.max(0, rank.ownShare)}
+                            {rank.ownShare < 0 ? <span className="text-red-500"> ⚠</span> : ''}
+                            {rank.ownShare > building.fps ? <span className="text-sm text-gray-500"> (+{rank.ownShare - building.fps})</span> : ''}
+                        </td>
+                        <td className="text-right">
+                            {rank.invest}
+                            <span className="text-sm text-gray-500"> ({rank.fp})</span>
+                        </td>
+                        <td className="text-right">
+                            <button
+                                className="p-1"
+                                onClick={() => {
                                 setInclude(null)
                                 updateBuilding({
                                     id: building.id,
@@ -70,10 +70,10 @@ const Ranks: FunctionalComponent<Props> = ({ building, ranks, include, setInclud
                                     level: building.level,
                                 })
                             }}>
-                            ⏫
-                        </button>
-                    </td>
-                </tr>
+                                ⏫
+                            </button>
+                        </td>
+                    </tr>
             })}
             </tbody>
         </table>
@@ -95,5 +95,5 @@ export default connect(
                 })
             },
         }
-    }
+    },
 )(Ranks)

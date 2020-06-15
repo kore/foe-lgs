@@ -11,7 +11,7 @@ module.exports = (config, PRODUCTION, SERVER) => {
                 rules: [
                     // Process JS with Babel.
                     {
-                        test: /\.(js|jsx)$/,
+                        test: /\.(js|jsx|ts|tsx)$/,
                         // HACK - primarily for IE11
                         //
                         // Some packages we use don't come transpiled for older JS versions
@@ -33,18 +33,6 @@ module.exports = (config, PRODUCTION, SERVER) => {
                             // Uses the babel.config.js in the project root
                             rootMode: 'upward',
                         },
-                    },
-                    // Process TypeScript with Babel.
-                    {
-                        test: /\.(ts)$/,
-                        loader: require.resolve('ts-loader'),
-                    },
-                    {
-                        test: /\.(tsx)$/,
-                        loader: [
-                            require.resolve('babel-loader'),
-                            require.resolve('ts-loader'),
-                        ],
                     },
                 ],
             },

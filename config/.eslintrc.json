@@ -1,7 +1,9 @@
 {
-    "extends": ["standard", "preact"],
+    "parser": "@typescript-eslint/parser",
+    "extends": ["standard", "preact", "plugin:@typescript-eslint/recommended"],
     "parserOptions": {
-        "ecmaVersion": 6,
+        "ecmaVersion": 2020,
+        "sourceType": "module",
         "ecmaFeatures": {
             "jsx": true,
             "modules": true

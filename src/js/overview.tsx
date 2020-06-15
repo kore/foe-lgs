@@ -8,7 +8,7 @@ import BuildingCard from './overview/building'
 import Select from './settings/select'
 import known from './data/buildings.json'
 
-import { Building, Rank, AddBuilding } from './types'
+import { Building, AddBuilding } from './types'
 
 export interface Props {
     selected: string,
@@ -89,5 +89,5 @@ export default connect(
                 })
             },
         }
-    }
+    },
 )(Overview)

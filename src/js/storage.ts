@@ -1,5 +1,5 @@
 class Storage {
-    load (item) {
+    load (item: string): string|number|boolean|Date|Json|JsonArray {
         try {
             const serializedState = window.localStorage.getItem(item);
             if (serializedState === null) {
@@ -11,7 +11,7 @@ class Storage {
         }
     }
 
-    save (item, value) {
+    save (item: string, value: string|number|boolean|Date|Json|JsonArray): void {
         try {
             const serializedState = JSON.stringify(value)
             window.localStorage.setItem(item, serializedState)

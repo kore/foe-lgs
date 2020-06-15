@@ -29,8 +29,6 @@ export interface SettingValues {
     ownShare: number,
 }
 
-export type SetSetting = (key: string, value: any) => void
+export type SetSetting = (key: string, value: number | string) => void
 
 export type UpdateFunction<T> = (value: T) => void
-
-

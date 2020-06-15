@@ -18,6 +18,9 @@
         "@babel/plugin-syntax-dynamic-import": "^7.2.0",
         "@babel/preset-env": "^7.5.4",
         "@babel/preset-react": "^7.0.0",
+        "@babel/preset-typescript": "^7.10.1",
+        "@typescript-eslint/eslint-plugin": "^3.2.0",
+        "@typescript-eslint/parser": "^3.2.0",
         "babel-eslint": "^10.1.0",
         "babel-loader": "8.0.6",
         "babel-plugin-lodash": "^3.3.4",
@@ -28,7 +31,7 @@
         "copy-webpack-plugin": "^6.0.2",
         "css-loader": "^3.5.3",
         "duplicate-package-checker-webpack-plugin": "^3.0.0",
-        "eslint": "^7.1.0",
+        "eslint": "^7.2.0",
         "eslint-config-preact": "^1.1.1",
         "eslint-config-standard": "^14.1.1",
         "eslint-plugin-flowtype": "^5.1.3",
@@ -69,8 +72,8 @@
         "start": "node bin/start.js",
         "build": "bin/extractTranslations && node bin/build.js",
         "deploy": "yarn run build && scp -r public/* privat-web.new:foe.k023.de/public/",
-        "format": "eslint --fix --ext .js --ext .jsx -c config/.eslintrc.json src/js/",
-        "check": "eslint --ext .js --ext .jsx -c config/.eslintrc.json src/js/"
+        "format": "eslint --fix --ext .js --ext .ts --ext .jsx --ext .tsx -c config/.eslintrc.json src/js/",
+        "check": "eslint --ext .js --ext .ts --ext .jsx --ext .tsx -c config/.eslintrc.json src/js/"
     },
     "browserslist": [
         "last 1 version",

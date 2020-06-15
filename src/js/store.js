@@ -17,7 +17,7 @@ const storeActions = {
         const buildingIndex = findIndex(state.buildings, { id: action.id })
         const building = {
             ...state.buildings[buildingIndex],
-            ...pick(action, ['level', 'fps'])
+            ...pick(action, ['level', 'fps']),
         }
         const buildings = [...state.buildings]
         buildings[buildingIndex] = building
@@ -71,7 +71,7 @@ const store = createStore(
             storeActions[action.type](state, action) :
             state
     },
-    initialStore
+    initialStore,
 )
 
 store.subscribe(throttle(() => {

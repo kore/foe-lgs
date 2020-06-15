@@ -55,5 +55,5 @@ export default connect(
             name: settings.name || 'Player',
             ...props,
         }
-    }
+    },
 )(Announcement)
