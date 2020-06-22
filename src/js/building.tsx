@@ -9,11 +9,12 @@ import { Progress } from './building/progress'
 import Ranks from './building/ranks'
 import Announcement from './building/announcement'
 
-import { Building, Rank } from './types'
+import { Building, Rank, RemoveBuilding } from './types'
 
 export interface Props {
     building: Building,
     percent: number,
+    removeBuilding: RemoveBuilding,
 }
 
 const calculateRankRequirements = (required: number, ranks: Rank[], percent: number): Rank[] => {
@@ -41,7 +42,7 @@ const calculateRankRequirements = (required: number, ranks: Rank[], percent: num
     return calculatedRanks
 }
 
-const BuildingOverview: FunctionalComponent<Props> = ({ building, percent }: Props) => {
+const BuildingOverview: FunctionalComponent<Props> = ({ building, percent, removeBuilding }: Props) => {
     const [include, setInclude] = useState(null)
     const [ranks, setRanks] = useState(null)
     const [data, setData] = useState(null)
@@ -61,7 +62,7 @@ const BuildingOverview: FunctionalComponent<Props> = ({ building, percent }: Pro
     }, [building])
 
     useEffect(() => {
-        if (!data) {
+        if (!data || !building) {
             return null
         }
 
@@ -90,6 +91,12 @@ const BuildingOverview: FunctionalComponent<Props> = ({ building, percent }: Pro
     }
 
     return <div>
+        <div className="float-right">
+            <button
+                onClick={() => { removeBuilding(building.id) } }>
+                🚮
+            </button>
+        </div>
         <h2>{t(data.name)}</h2>
         <Settings
             building={building}
@@ -120,6 +127,16 @@ export default connect(
             building: find(buildings, { id: selected }),
             percent: settings.percent || 90,
             ...props,
+        }
+    },
+    (dispatch) => {
+        return {
+            removeBuilding: (buildingId) => {
+                dispatch({
+                    type: 'Building.remove',
+                    building: buildingId,
+                })
+            },
         }
     },
 )(BuildingOverview)
