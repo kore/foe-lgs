@@ -20,7 +20,7 @@ const BuildingCard: FunctionalComponent<Props> = ({ building, data, selected = f
             className="appearance-none"
             onClick={() => { selectBuidling(building.id) } }>
             <h3>{t(data.name)}</h3>
-            <h4 className="text-sm font-hairline">Level {building.level}</h4>
+            <h4 className="text-sm font-normal">Level {building.level - 1} → <strong>{building.level}</strong></h4>
         </button>
     </div>
 }
