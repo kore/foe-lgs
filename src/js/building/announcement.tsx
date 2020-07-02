@@ -21,7 +21,7 @@ const Announcement: FunctionalComponent<Props> = ({ name, building, ranks, inclu
         for (let i = ranks.length - 1; i >= 0; --i) {
             const rank = ranks[i]
             if (include && include[rank.rank]) {
-                investString += ` P${rank.rank} (${rank.invest}${rank.ownShare < building.fps ? ' ⚠' : ''})`
+                investString += ` P${rank.rank} (${rank.invest}$)`
             }
         }
     }
