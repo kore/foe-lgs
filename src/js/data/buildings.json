@@ -44,12 +44,20 @@
         "name": "Deal Castle"
     },
     {
+        "id": "bf796278",
+        "name": "Flying Island"
+    },
+    {
         "id": "f6662f57",
         "name": "Frauenkirche of Dresden"
     },
     {
         "id": "d41d37f7",
         "name": "Gaea Statue"
+    },
+    {
+        "id": "e7ba6515",
+        "name": "Galata Tower"
     },
     {
         "id": "b20e5d98",
@@ -145,7 +153,7 @@
     },
     {
         "id": "5d6d88f0",
-        "name": "The Virgo Project\u200b"
+        "name": "The Virgo Project"
     },
     {
         "id": "ea61791d",
