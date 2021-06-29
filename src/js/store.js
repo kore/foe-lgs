@@ -56,7 +56,7 @@ const storage = new Storage()
 const initialStore = {
     selected: storage.load('selected') || null,
     buildings: storage.load('buildings') || [],
-    settings: storage.load('settings') || [],
+    settings: storage.load('settings') || {},
 }
 
 const store = createStore(
