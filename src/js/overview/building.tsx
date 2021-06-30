@@ -15,11 +15,11 @@ export interface Props {
 const BuildingCard: FunctionalComponent<Props> = ({ building, data, selected = false, selectBuidling }: Props) => {
     const { t } = useContext(TranslateContext)
 
-    return <div className={`card grid grid-rows-1${selected ? ' card--selected' : ''}`}>
+    return <div className={`card grid p-1 grid-rows-1${selected ? ' card--selected' : ''}`}>
         <button
             className="appearance-none"
             onClick={() => { selectBuidling(building.id) } }>
-            <h3>{t(data.name)}</h3>
+            <h3 className="text-base">{t(data.name)}</h3>
             <h4 className="text-sm font-normal">Level {building.level - 1} → <strong>{building.level}</strong></h4>
         </button>
     </div>
