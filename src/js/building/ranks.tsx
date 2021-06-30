@@ -51,9 +51,9 @@ const Ranks: FunctionalComponent<Props> = ({ building, ranks, include, setInclud
                         }
                         </td>
                         <td className="text-right">
+                            {rank.ownShare > building.fps ? <span className="text-sm text-gray-500">(+{rank.ownShare - building.fps}) </span> : ''}
                             {Math.max(0, rank.ownShare)}
                             {rank.ownShare < 0 ? <span className="text-red-500"> ⚠</span> : ''}
-                            {rank.ownShare > building.fps ? <span className="text-sm text-gray-500"> (+{rank.ownShare - building.fps})</span> : ''}
                         </td>
                         <td className="text-right">
                             {rank.invest}
@@ -66,7 +66,7 @@ const Ranks: FunctionalComponent<Props> = ({ building, ranks, include, setInclud
                                 setInclude(null)
                                 updateBuilding({
                                     id: building.id,
-                                    fps: rank.ownShare,
+                                    fps: Math.max(0, rank.ownShare),
                                     level: building.level,
                                 })
                             }}>
