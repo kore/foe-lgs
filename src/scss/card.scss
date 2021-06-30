@@ -8,4 +8,8 @@
     &.card--selected {
         @apply bg-blue-100;
     }
+
+    button {
+        @apply m-0 p-0;
+    }
 }
