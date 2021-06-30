@@ -66,7 +66,7 @@ const Ranks: FunctionalComponent<Props> = ({ building, ranks, include, setInclud
                                 setInclude(null)
                                 updateBuilding({
                                     id: building.id,
-                                    fps: Math.max(building.fps, rank.ownShare),
+                                    fps: rank.ownShare,
                                     level: building.level,
                                 })
                             }}>
